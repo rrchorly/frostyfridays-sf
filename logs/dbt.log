@@ -4958,3 +4958,1106 @@ select
     show terse objects in TEST_DB.DVD_FROSTY_FRIDAYS
 15:06:25.279982 [debug] [ThreadPool]: Opening a new connection, currently in state init
 15:06:25.284404 [debug] [ThreadPool]: Opening a new connection, currently in state init
+15:06:26.945937 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.67 seconds
+15:06:26.969393 [debug] [ThreadPool]: On list_TEST_DB_dbt_artifacts_stg: Close
+15:06:27.265425 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.98 seconds
+15:06:27.276303 [debug] [ThreadPool]: On list_TEST_DB_DVD_FROSTY_FRIDAYS: Close
+15:06:27.279689 [debug] [ThreadPool]: SQL status: SUCCESS 20 in 2.01 seconds
+15:06:27.315352 [debug] [ThreadPool]: On list_TEST_DB_dbt_artifacts: Close
+15:06:27.509261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5cb97093-a4da-418a-8b12-f5acfc29fbd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f34d6f5b0>]}
+15:06:27.512965 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+15:06:27.519611 [info ] [MainThread]: 
+15:06:27.541657 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.stg_dbt__artifacts
+15:06:27.542211 [debug] [Thread-2  ]: Began running node model.frosty.challenge_01
+15:06:27.542805 [debug] [Thread-3  ]: Began running node operation.frosty.frosty-on-run-start-0
+15:06:27.544829 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.stg_dbt__artifacts"
+15:06:27.547621 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.frosty.challenge_01"
+15:06:27.556545 [debug] [Thread-3  ]: Acquiring new snowflake connection "operation.frosty.frosty-on-run-start-0"
+15:06:27.558957 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.stg_dbt__artifacts
+15:06:27.560983 [debug] [Thread-2  ]: Began compiling node model.frosty.challenge_01
+15:06:27.563132 [debug] [Thread-3  ]: Began compiling node operation.frosty.frosty-on-run-start-0
+15:06:27.566033 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.stg_dbt__artifacts
+15:06:27.568806 [debug] [Thread-2  ]: Compiling model.frosty.challenge_01
+15:06:27.571640 [debug] [Thread-3  ]: Compiling operation.frosty.frosty-on-run-start-0
+15:06:27.587628 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.stg_dbt__artifacts"
+15:06:27.621289 [debug] [Thread-2  ]: Using snowflake connection "model.frosty.challenge_01"
+15:06:27.630698 [debug] [Thread-3  ]: Writing injected SQL for node "operation.frosty.frosty-on-run-start-0"
+15:06:27.635582 [debug] [Thread-2  ]: On model.frosty.challenge_01: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "node_id": "model.frosty.challenge_01"} */
+
+    
+    create stage if not exists TEST_DB.DVD_FROSTY_FRIDAYS.dvd_frosty_fridays 
+    url='s3://frostyfridaychallenges/challenge_1/' file_format=(type=csv SKIP_HEADER =1);
+15:06:27.640182 [debug] [Thread-1  ]: finished collecting timing info
+15:06:27.641984 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+15:06:27.644647 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.stg_dbt__artifacts
+15:06:27.645162 [debug] [Thread-3  ]: finished collecting timing info
+15:06:27.657957 [debug] [Thread-1  ]: finished collecting timing info
+15:06:27.662782 [debug] [Thread-3  ]: Began executing node operation.frosty.frosty-on-run-start-0
+15:06:27.665838 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.stg_dbt__artifacts
+15:06:27.670776 [debug] [Thread-3  ]: finished collecting timing info
+15:06:27.675168 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.stg_dbt__nodes
+15:06:27.675644 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.stg_dbt__run_results
+15:06:27.677612 [debug] [Thread-3  ]: Finished running node operation.frosty.frosty-on-run-start-0
+15:06:27.684824 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.stg_dbt__nodes"
+15:06:27.701880 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.stg_dbt__nodes
+15:06:27.707224 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.stg_dbt__nodes
+15:06:27.689657 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.stg_dbt__run_results"
+15:06:27.728853 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.stg_dbt__nodes"
+15:06:27.729534 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.stg_dbt__run_results
+15:06:27.739270 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.stg_dbt__run_results
+15:06:27.759162 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.stg_dbt__run_results"
+15:06:27.775242 [debug] [Thread-4  ]: finished collecting timing info
+15:06:27.781142 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.stg_dbt__nodes
+15:06:27.784333 [debug] [Thread-1  ]: finished collecting timing info
+15:06:27.785393 [debug] [Thread-4  ]: finished collecting timing info
+15:06:27.788198 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.stg_dbt__run_results
+15:06:27.791955 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.stg_dbt__nodes
+15:06:27.795154 [debug] [Thread-1  ]: finished collecting timing info
+15:06:27.801764 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.dim_dbt__exposures
+15:06:27.803378 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.dim_dbt__models
+15:06:27.804917 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.stg_dbt__run_results
+15:06:27.808945 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__exposures"
+15:06:27.836628 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__models"
+15:06:27.839784 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.dim_dbt__seeds
+15:06:27.876011 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__seeds"
+15:06:27.871177 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.dim_dbt__models
+15:06:27.842950 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.dim_dbt__exposures
+15:06:27.880736 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.dim_dbt__seeds
+15:06:27.883369 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.dim_dbt__models
+15:06:27.919657 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.dim_dbt__exposures
+15:06:27.945652 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.dim_dbt__seeds
+15:06:27.992675 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__models"
+15:06:28.028182 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__exposures"
+15:06:28.064690 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__seeds"
+15:06:28.102021 [debug] [Thread-4  ]: finished collecting timing info
+15:06:28.125947 [debug] [Thread-3  ]: finished collecting timing info
+15:06:28.139539 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.dim_dbt__models
+15:06:28.228750 [debug] [Thread-4  ]: finished collecting timing info
+15:06:28.162627 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.dim_dbt__exposures
+15:06:28.289077 [debug] [Thread-3  ]: finished collecting timing info
+15:06:28.275962 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.dim_dbt__models
+15:06:28.337753 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.dim_dbt__snapshots
+15:06:28.323718 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.dim_dbt__exposures
+15:06:28.156794 [debug] [Thread-1  ]: finished collecting timing info
+15:06:28.453077 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.dim_dbt__seeds
+15:06:28.411519 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.dim_dbt__sources
+15:06:28.374465 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__snapshots"
+15:06:28.477048 [debug] [Thread-1  ]: finished collecting timing info
+15:06:28.514680 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__sources"
+15:06:28.571291 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.dim_dbt__sources
+15:06:28.574208 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.dim_dbt__sources
+15:06:28.568734 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.dim_dbt__seeds
+15:06:28.564270 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.dim_dbt__snapshots
+15:06:28.598654 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__sources"
+15:06:28.601196 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.dim_dbt__tests
+15:06:28.604301 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.dim_dbt__snapshots
+15:06:28.612265 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__tests"
+15:06:28.649870 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.dim_dbt__tests
+15:06:28.663232 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.dim_dbt__tests
+15:06:28.616661 [debug] [Thread-3  ]: finished collecting timing info
+15:06:28.642337 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__snapshots"
+15:06:28.873117 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.23 seconds
+15:06:28.879980 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.dim_dbt__sources
+15:06:28.887737 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__tests"
+15:06:28.928859 [debug] [Thread-2  ]: Writing injected SQL for node "model.frosty.challenge_01"
+15:06:28.930827 [debug] [Thread-4  ]: finished collecting timing info
+15:06:28.933183 [debug] [Thread-3  ]: finished collecting timing info
+15:06:28.942534 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.dim_dbt__snapshots
+15:06:28.955437 [debug] [Thread-4  ]: finished collecting timing info
+15:06:28.951480 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.dim_dbt__sources
+15:06:28.949456 [debug] [Thread-1  ]: finished collecting timing info
+15:06:28.960352 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.dim_dbt__snapshots
+15:06:28.972811 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.stg_dbt__run_results_env_keys
+15:06:28.963967 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.stg_dbt__node_executions
+15:06:28.968286 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.dim_dbt__tests
+15:06:28.962873 [debug] [Thread-2  ]: finished collecting timing info
+15:06:28.978026 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.stg_dbt__run_results_env_keys"
+15:06:28.980970 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.stg_dbt__node_executions"
+15:06:28.983644 [debug] [Thread-1  ]: finished collecting timing info
+15:06:28.987143 [debug] [Thread-2  ]: Began executing node model.frosty.challenge_01
+15:06:28.990121 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.stg_dbt__run_results_env_keys
+15:06:29.002212 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.stg_dbt__run_results_env_keys
+15:06:28.996164 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.dim_dbt__tests
+15:06:28.999069 [debug] [Thread-2  ]: finished collecting timing info
+15:06:29.019311 [debug] [Thread-2  ]: On model.frosty.challenge_01: Close
+15:06:29.012393 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.stg_dbt__run_results_env_keys"
+15:06:29.014307 [debug] [Thread-1  ]: Began running node test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60
+15:06:28.992691 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.stg_dbt__node_executions
+15:06:29.030364 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60"
+15:06:29.033599 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.stg_dbt__node_executions
+15:06:29.036038 [debug] [Thread-1  ]: Began compiling node test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60
+15:06:29.044258 [debug] [Thread-4  ]: finished collecting timing info
+15:06:29.055042 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.stg_dbt__node_executions"
+15:06:29.055474 [debug] [Thread-1  ]: Compiling test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60
+15:06:29.058244 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.stg_dbt__run_results_env_keys
+15:06:29.119542 [debug] [Thread-3  ]: finished collecting timing info
+15:06:29.120241 [debug] [Thread-4  ]: finished collecting timing info
+15:06:29.132130 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60"
+15:06:29.150200 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.stg_dbt__node_executions
+15:06:29.169442 [debug] [Thread-3  ]: finished collecting timing info
+15:06:29.172785 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.stg_dbt__node_executions
+15:06:29.176792 [debug] [Thread-3  ]: Began running node test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e
+15:06:29.176127 [debug] [Thread-1  ]: finished collecting timing info
+15:06:29.164549 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.stg_dbt__run_results_env_keys
+15:06:29.179732 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e"
+15:06:29.183308 [debug] [Thread-1  ]: Began executing node test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60
+15:06:29.185605 [debug] [Thread-4  ]: Began running node test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d
+15:06:29.188253 [debug] [Thread-3  ]: Began compiling node test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e
+15:06:29.204132 [debug] [Thread-3  ]: Compiling test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e
+15:06:29.195624 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d"
+15:06:29.222826 [debug] [Thread-4  ]: Began compiling node test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d
+15:06:29.222205 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e"
+15:06:29.191309 [debug] [Thread-1  ]: finished collecting timing info
+15:06:29.228773 [debug] [Thread-2  ]: Finished running node model.frosty.challenge_01
+15:06:29.229099 [debug] [Thread-4  ]: Compiling test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d
+15:06:29.235638 [debug] [Thread-1  ]: Finished running node test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60
+15:06:29.239071 [debug] [Thread-2  ]: Began running node test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a
+15:06:29.240039 [debug] [Thread-3  ]: finished collecting timing info
+15:06:29.249246 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d"
+15:06:29.258377 [debug] [Thread-1  ]: Began running node test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000
+15:06:29.261495 [debug] [Thread-2  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a"
+15:06:29.263894 [debug] [Thread-3  ]: Began executing node test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e
+15:06:29.270789 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000"
+15:06:29.275180 [debug] [Thread-2  ]: Began compiling node test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a
+15:06:29.279584 [debug] [Thread-3  ]: finished collecting timing info
+15:06:29.301758 [debug] [Thread-1  ]: Began compiling node test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000
+15:06:29.312070 [debug] [Thread-1  ]: Compiling test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000
+15:06:29.306378 [debug] [Thread-2  ]: Compiling test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a
+15:06:29.309983 [debug] [Thread-3  ]: Finished running node test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e
+15:06:29.305721 [debug] [Thread-4  ]: finished collecting timing info
+15:06:29.389057 [debug] [Thread-4  ]: Began executing node test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d
+15:06:29.362413 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a"
+15:06:29.363348 [debug] [Thread-3  ]: Began running node test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce
+15:06:29.324215 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000"
+15:06:29.391979 [debug] [Thread-4  ]: finished collecting timing info
+15:06:29.399401 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce"
+15:06:29.404863 [debug] [Thread-2  ]: finished collecting timing info
+15:06:29.406865 [debug] [Thread-4  ]: Finished running node test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d
+15:06:29.409610 [debug] [Thread-3  ]: Began compiling node test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce
+15:06:29.411555 [debug] [Thread-2  ]: Began executing node test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a
+15:06:29.413907 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.fct_dbt__seed_executions
+15:06:29.415909 [debug] [Thread-1  ]: finished collecting timing info
+15:06:29.417218 [debug] [Thread-3  ]: Compiling test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce
+15:06:29.419736 [debug] [Thread-2  ]: finished collecting timing info
+15:06:29.423446 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__seed_executions"
+15:06:29.425815 [debug] [Thread-1  ]: Began executing node test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000
+15:06:29.437755 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce"
+15:06:29.440026 [debug] [Thread-2  ]: Finished running node test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a
+15:06:29.442797 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.fct_dbt__seed_executions
+15:06:29.445295 [debug] [Thread-1  ]: finished collecting timing info
+15:06:29.483997 [debug] [Thread-2  ]: Began running node model.dbt_artifacts.fct_dbt__snapshot_executions
+15:06:29.487307 [debug] [Thread-3  ]: finished collecting timing info
+15:06:29.487795 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.fct_dbt__seed_executions
+15:06:29.491337 [debug] [Thread-1  ]: Finished running node test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000
+15:06:29.494160 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__snapshot_executions"
+15:06:29.496764 [debug] [Thread-3  ]: Began executing node test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce
+15:06:29.512696 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__seed_executions"
+15:06:29.524340 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.fct_dbt__test_executions
+15:06:29.527753 [debug] [Thread-2  ]: Began compiling node model.dbt_artifacts.fct_dbt__snapshot_executions
+15:06:29.530630 [debug] [Thread-3  ]: finished collecting timing info
+15:06:29.537013 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__test_executions"
+15:06:29.546088 [debug] [Thread-2  ]: Compiling model.dbt_artifacts.fct_dbt__snapshot_executions
+15:06:29.553918 [debug] [Thread-3  ]: Finished running node test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce
+15:06:29.558869 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.fct_dbt__test_executions
+15:06:29.572729 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__snapshot_executions"
+15:06:29.573078 [debug] [Thread-4  ]: finished collecting timing info
+15:06:29.574731 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.int_dbt__model_executions
+15:06:29.576863 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.fct_dbt__test_executions
+15:06:29.582014 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.fct_dbt__seed_executions
+15:06:29.584657 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.int_dbt__model_executions"
+15:06:29.595130 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__test_executions"
+15:06:29.597387 [debug] [Thread-2  ]: finished collecting timing info
+15:06:29.598589 [debug] [Thread-4  ]: finished collecting timing info
+15:06:29.648019 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.fct_dbt__seed_executions
+15:06:29.637696 [debug] [Thread-2  ]: Began executing node model.dbt_artifacts.fct_dbt__snapshot_executions
+15:06:29.645575 [debug] [Thread-1  ]: finished collecting timing info
+15:06:29.600686 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.int_dbt__model_executions
+15:06:29.659978 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.int_dbt__model_executions
+15:06:29.655233 [debug] [Thread-2  ]: finished collecting timing info
+15:06:29.657367 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.fct_dbt__test_executions
+15:06:29.653345 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.fct_dbt__run_results
+15:06:29.676428 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.int_dbt__model_executions"
+15:06:29.705404 [debug] [Thread-2  ]: Finished running node model.dbt_artifacts.fct_dbt__snapshot_executions
+15:06:29.707928 [debug] [Thread-1  ]: finished collecting timing info
+15:06:29.711779 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__run_results"
+15:06:29.721952 [debug] [Thread-3  ]: finished collecting timing info
+15:06:29.723088 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.fct_dbt__test_executions
+15:06:29.725406 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.fct_dbt__run_results
+15:06:29.727723 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.int_dbt__model_executions
+15:06:29.732624 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.fct_dbt__run_results
+15:06:29.734728 [debug] [Thread-3  ]: finished collecting timing info
+15:06:29.755758 [debug] [Thread-4  ]: Using snowflake connection "model.dbt_artifacts.fct_dbt__run_results"
+15:06:29.767969 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.int_dbt__model_executions
+15:06:29.770891 [debug] [Thread-4  ]: On model.dbt_artifacts.fct_dbt__run_results: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "node_id": "model.dbt_artifacts.fct_dbt__run_results"} */
+select
+                key as value
+
+            from TEST_DB.dbt_artifacts_stg.stg_dbt__run_results_env_keys
+            group by key
+            order by count(*) desc
+15:06:29.775205 [debug] [Thread-2  ]: Began running node model.dbt_artifacts.fct_dbt__model_executions
+15:06:29.776357 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+15:06:29.779357 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__model_executions"
+15:06:29.783932 [debug] [Thread-2  ]: Began compiling node model.dbt_artifacts.fct_dbt__model_executions
+15:06:29.809327 [debug] [Thread-2  ]: Compiling model.dbt_artifacts.fct_dbt__model_executions
+15:06:29.826528 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__model_executions"
+15:06:29.863834 [debug] [Thread-2  ]: finished collecting timing info
+15:06:29.866845 [debug] [Thread-2  ]: Began executing node model.dbt_artifacts.fct_dbt__model_executions
+15:06:29.869817 [debug] [Thread-2  ]: finished collecting timing info
+15:06:29.874212 [debug] [Thread-2  ]: Finished running node model.dbt_artifacts.fct_dbt__model_executions
+15:06:29.885254 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.fct_dbt__exposures_updates
+15:06:29.885935 [debug] [Thread-1  ]: Began running node test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69
+15:06:29.886537 [debug] [Thread-2  ]: Began running node test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59
+15:06:29.888440 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__exposures_updates"
+15:06:29.912652 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.fct_dbt__exposures_updates
+15:06:29.895599 [debug] [Thread-2  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59"
+15:06:29.892573 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69"
+15:06:29.918824 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.fct_dbt__exposures_updates
+15:06:29.926313 [debug] [Thread-2  ]: Began compiling node test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59
+15:06:29.929637 [debug] [Thread-1  ]: Began compiling node test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69
+15:06:29.943959 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__exposures_updates"
+15:06:29.976016 [debug] [Thread-2  ]: Compiling test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59
+15:06:29.980477 [debug] [Thread-1  ]: Compiling test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69
+15:06:29.997395 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59"
+15:06:30.011146 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69"
+15:06:30.014108 [debug] [Thread-3  ]: finished collecting timing info
+15:06:30.019232 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.fct_dbt__exposures_updates
+15:06:30.023267 [debug] [Thread-3  ]: finished collecting timing info
+15:06:30.034435 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.fct_dbt__exposures_updates
+15:06:30.048524 [debug] [Thread-2  ]: finished collecting timing info
+15:06:30.054888 [debug] [Thread-1  ]: finished collecting timing info
+15:06:30.134556 [debug] [Thread-1  ]: Began executing node test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69
+15:06:30.150282 [debug] [Thread-1  ]: finished collecting timing info
+15:06:30.228934 [debug] [Thread-1  ]: Finished running node test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69
+15:06:30.099070 [debug] [Thread-2  ]: Began executing node test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59
+15:06:30.272481 [debug] [Thread-2  ]: finished collecting timing info
+15:06:30.287781 [debug] [Thread-2  ]: Finished running node test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59
+15:06:31.121239 [debug] [Thread-4  ]: SQL status: SUCCESS 5 in 1.34 seconds
+15:06:31.126129 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__run_results"
+15:06:31.133215 [debug] [Thread-4  ]: finished collecting timing info
+15:06:31.134659 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.fct_dbt__run_results
+15:06:31.136318 [debug] [Thread-4  ]: finished collecting timing info
+15:06:31.137724 [debug] [Thread-4  ]: On model.dbt_artifacts.fct_dbt__run_results: Close
+15:06:31.346931 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.fct_dbt__run_results
+15:06:31.350782 [debug] [Thread-3  ]: Began running node test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935
+15:06:31.351218 [debug] [Thread-1  ]: Began running node test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3
+15:06:31.356036 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3"
+15:06:31.352171 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.fct_dbt__latest_full_model_executions
+15:06:31.353596 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935"
+15:06:31.351537 [debug] [Thread-2  ]: Began running node model.dbt_artifacts.dim_dbt__current_models
+15:06:31.367745 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__current_models"
+15:06:31.360790 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__latest_full_model_executions"
+15:06:31.365503 [debug] [Thread-3  ]: Began compiling node test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935
+15:06:31.358146 [debug] [Thread-1  ]: Began compiling node test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3
+15:06:31.377065 [debug] [Thread-1  ]: Compiling test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3
+15:06:31.372539 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.fct_dbt__latest_full_model_executions
+15:06:31.374719 [debug] [Thread-3  ]: Compiling test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935
+15:06:31.369965 [debug] [Thread-2  ]: Began compiling node model.dbt_artifacts.dim_dbt__current_models
+15:06:31.386867 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3"
+15:06:31.388265 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.fct_dbt__latest_full_model_executions
+15:06:31.395383 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935"
+15:06:31.397300 [debug] [Thread-2  ]: Compiling model.dbt_artifacts.dim_dbt__current_models
+15:06:31.405596 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__latest_full_model_executions"
+15:06:31.406895 [debug] [Thread-1  ]: finished collecting timing info
+15:06:31.417913 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__current_models"
+15:06:31.432170 [debug] [Thread-3  ]: finished collecting timing info
+15:06:31.456006 [debug] [Thread-3  ]: Began executing node test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935
+15:06:31.454032 [debug] [Thread-4  ]: finished collecting timing info
+15:06:31.452204 [debug] [Thread-1  ]: Began executing node test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3
+15:06:31.458550 [debug] [Thread-3  ]: finished collecting timing info
+15:06:31.458834 [debug] [Thread-2  ]: finished collecting timing info
+15:06:31.461744 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.fct_dbt__latest_full_model_executions
+15:06:31.480824 [debug] [Thread-1  ]: finished collecting timing info
+15:06:31.503718 [debug] [Thread-3  ]: Finished running node test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935
+15:06:31.505762 [debug] [Thread-2  ]: Began executing node model.dbt_artifacts.dim_dbt__current_models
+15:06:31.507409 [debug] [Thread-4  ]: finished collecting timing info
+15:06:31.509901 [debug] [Thread-1  ]: Finished running node test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3
+15:06:31.513136 [debug] [Thread-2  ]: finished collecting timing info
+15:06:31.516069 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.fct_dbt__latest_full_model_executions
+15:06:31.521537 [debug] [Thread-2  ]: Finished running node model.dbt_artifacts.dim_dbt__current_models
+15:06:31.524874 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.fct_dbt__critical_path
+15:06:31.528371 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__critical_path"
+15:06:31.525368 [debug] [Thread-4  ]: Began running node test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c
+15:06:31.526821 [debug] [Thread-2  ]: Began running node test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb
+15:06:31.525214 [debug] [Thread-1  ]: Began running node test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66
+15:06:31.529995 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.fct_dbt__critical_path
+15:06:31.532181 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c"
+15:06:31.535030 [debug] [Thread-2  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb"
+15:06:31.538188 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66"
+15:06:31.543275 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.fct_dbt__critical_path
+15:06:31.545509 [debug] [Thread-4  ]: Began compiling node test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c
+15:06:31.547649 [debug] [Thread-2  ]: Began compiling node test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb
+15:06:31.549746 [debug] [Thread-1  ]: Began compiling node test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66
+15:06:31.561310 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__critical_path"
+15:06:31.577097 [debug] [Thread-4  ]: Compiling test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c
+15:06:31.579158 [debug] [Thread-2  ]: Compiling test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb
+15:06:31.580896 [debug] [Thread-1  ]: Compiling test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66
+15:06:31.592892 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c"
+15:06:31.601346 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb"
+15:06:31.601732 [debug] [Thread-3  ]: finished collecting timing info
+15:06:31.623892 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66"
+15:06:31.632229 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.fct_dbt__critical_path
+15:06:31.633570 [debug] [Thread-4  ]: finished collecting timing info
+15:06:31.638142 [debug] [Thread-2  ]: finished collecting timing info
+15:06:31.639009 [debug] [Thread-3  ]: finished collecting timing info
+15:06:31.641073 [debug] [Thread-1  ]: finished collecting timing info
+15:06:31.641496 [debug] [Thread-4  ]: Began executing node test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c
+15:06:31.667751 [debug] [Thread-4  ]: finished collecting timing info
+15:06:31.645825 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.fct_dbt__critical_path
+15:06:31.665977 [debug] [Thread-1  ]: Began executing node test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66
+15:06:31.643424 [debug] [Thread-2  ]: Began executing node test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb
+15:06:31.676894 [debug] [Thread-2  ]: finished collecting timing info
+15:06:31.672600 [debug] [Thread-3  ]: Began running node test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea
+15:06:31.674786 [debug] [Thread-1  ]: finished collecting timing info
+15:06:31.670362 [debug] [Thread-4  ]: Finished running node test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c
+15:06:31.684571 [debug] [Thread-4  ]: Began running node test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496
+15:06:31.680964 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea"
+15:06:31.682777 [debug] [Thread-1  ]: Finished running node test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66
+15:06:31.679082 [debug] [Thread-2  ]: Finished running node test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb
+15:06:31.686311 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496"
+15:06:31.687866 [debug] [Thread-3  ]: Began compiling node test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea
+15:06:31.689427 [debug] [Thread-1  ]: Began running node test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10
+15:06:31.692528 [debug] [Thread-4  ]: Began compiling node test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496
+15:06:31.693986 [debug] [Thread-3  ]: Compiling test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea
+15:06:31.696281 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10"
+15:06:31.698806 [debug] [Thread-4  ]: Compiling test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496
+15:06:31.707080 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea"
+15:06:31.709952 [debug] [Thread-1  ]: Began compiling node test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10
+15:06:31.736723 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496"
+15:06:31.739923 [debug] [Thread-1  ]: Compiling test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10
+15:06:31.743637 [debug] [Thread-3  ]: finished collecting timing info
+15:06:31.751740 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10"
+15:06:31.766389 [debug] [Thread-3  ]: Began executing node test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea
+15:06:31.768901 [debug] [Thread-4  ]: finished collecting timing info
+15:06:31.770218 [debug] [Thread-3  ]: finished collecting timing info
+15:06:31.772337 [debug] [Thread-4  ]: Began executing node test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496
+15:06:31.774782 [debug] [Thread-3  ]: Finished running node test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea
+15:06:31.775197 [debug] [Thread-1  ]: finished collecting timing info
+15:06:31.799214 [debug] [Thread-1  ]: Began executing node test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10
+15:06:31.801178 [debug] [Thread-1  ]: finished collecting timing info
+15:06:31.776903 [debug] [Thread-4  ]: finished collecting timing info
+15:06:31.805663 [debug] [Thread-4  ]: Finished running node test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496
+15:06:31.803672 [debug] [Thread-1  ]: Finished running node test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10
+15:06:31.811786 [debug] [MainThread]: Connection 'master' was properly closed.
+15:06:31.813690 [debug] [MainThread]: Connection 'test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10' was properly closed.
+15:06:31.815380 [debug] [MainThread]: Connection 'test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb' was properly closed.
+15:06:31.836050 [debug] [MainThread]: Connection 'test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea' was properly closed.
+15:06:31.837770 [debug] [MainThread]: Connection 'test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496' was properly closed.
+15:06:31.902835 [info ] [MainThread]: Done.
+15:06:31.969361 [debug] [MainThread]: Acquiring new snowflake connection "generate_catalog"
+15:06:31.971274 [info ] [MainThread]: Building catalog
+15:06:31.983937 [debug] [ThreadPool]: Acquiring new snowflake connection "TEST_DB.information_schema"
+15:06:32.008522 [debug] [ThreadPool]: Using snowflake connection "TEST_DB.information_schema"
+15:06:32.011038 [debug] [ThreadPool]: On TEST_DB.information_schema: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "connection_name": "TEST_DB.information_schema"} */
+
+    
+      with tables as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+              table_type as "table_type",
+              comment as "table_comment",
+
+              -- note: this is the _role_ that owns the table
+              table_owner as "table_owner",
+
+              'Clustering Key' as "stats:clustering_key:label",
+              clustering_key as "stats:clustering_key:value",
+              'The key used to cluster this table' as "stats:clustering_key:description",
+              (clustering_key is not null) as "stats:clustering_key:include",
+
+              'Row Count' as "stats:row_count:label",
+              row_count as "stats:row_count:value",
+              'An approximate count of rows in this table' as "stats:row_count:description",
+              (row_count is not null) as "stats:row_count:include",
+
+              'Approximate Size' as "stats:bytes:label",
+              bytes as "stats:bytes:value",
+              'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+              (bytes is not null) as "stats:bytes:include",
+
+              'Last Modified' as "stats:last_modified:label",
+              to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+              'The timestamp for last update/change' as "stats:last_modified:description",
+              (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+
+          from TEST_DB.INFORMATION_SCHEMA.tables
+
+      ),
+
+      columns as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+
+              column_name as "column_name",
+              ordinal_position as "column_index",
+              data_type as "column_type",
+              comment as "column_comment"
+
+          from TEST_DB.INFORMATION_SCHEMA.columns
+      )
+
+      select *
+      from tables
+      join columns using ("table_database", "table_schema", "table_name")
+      where (upper("table_schema") = upper('dvd_frosty_fridays') or upper("table_schema") = upper('dbt_artifacts_stg') or upper("table_schema") = upper('dbt_artifacts'))
+      order by "column_index"
+15:06:32.014599 [debug] [ThreadPool]: Opening a new connection, currently in state init
+15:06:35.806272 [debug] [ThreadPool]: SQL status: SUCCESS 297 in 3.79 seconds
+15:06:36.779163 [debug] [ThreadPool]: On TEST_DB.information_schema: Close
+15:06:37.164149 [info ] [MainThread]: Catalog written to /app/target/catalog.json
+15:06:37.168641 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f35f28ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f35fd2430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f34cb8100>]}
+15:06:37.749364 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+15:06:37.754500 [debug] [MainThread]: Connection 'TEST_DB.information_schema' was properly closed.
+
+
+============================== 2022-07-20 15:09:01.597588 | 1134ffa0-a88b-4e22-8ebc-b0acbeb6d957 ==============================
+15:09:01.597610 [info ] [MainThread]: Running with dbt=1.1.1
+15:09:01.600423 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/app/profiles', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'compile': True, 'which': 'generate', 'rpc_method': 'docs.generate', 'indirect_selection': 'eager'}
+15:09:01.604281 [debug] [MainThread]: Tracking: tracking
+15:09:01.607306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0f706eb80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0f70c7f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0f70c74c0>]}
+15:09:01.958655 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+15:09:01.960440 [debug] [MainThread]: Partial parsing: updated file: frosty://macros/docs/ch_01.md
+15:09:01.961718 [debug] [MainThread]: Partial parsing: updated file: frosty://macros/generate_schema_name.sql
+15:09:01.962919 [debug] [MainThread]: Parsing macros/generate_schema_name.sql
+15:09:01.968682 [info ] [MainThread]: Change detected to override macro used during parsing. Starting full parse.
+15:09:01.970094 [debug] [MainThread]: Parsing macros/create_stage.sql
+15:09:01.973911 [debug] [MainThread]: Parsing macros/generate_schema_name.sql
+15:09:01.978377 [debug] [MainThread]: Parsing macros/catalog.sql
+15:09:01.985448 [debug] [MainThread]: Parsing macros/adapters.sql
+15:09:02.067061 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+15:09:02.075056 [debug] [MainThread]: Parsing macros/materializations/view.sql
+15:09:02.079418 [debug] [MainThread]: Parsing macros/materializations/table.sql
+15:09:02.088540 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+15:09:02.170331 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+15:09:02.555566 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+15:09:02.573631 [debug] [MainThread]: Parsing macros/etc/statement.sql
+15:09:02.583155 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+15:09:02.599508 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+15:09:02.606858 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+15:09:02.611541 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+15:09:02.616152 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+15:09:02.626092 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+15:09:02.631100 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+15:09:02.645717 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+15:09:02.653630 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+15:09:02.658465 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+15:09:02.672584 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+15:09:02.680232 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+15:09:02.686146 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+15:09:02.721107 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+15:09:02.725679 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+15:09:02.733596 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+15:09:02.752132 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+15:09:02.785071 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+15:09:02.824304 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+15:09:02.842996 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+15:09:02.846682 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+15:09:02.872152 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+15:09:02.903817 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+15:09:02.924442 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+15:09:02.928850 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+15:09:02.938390 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+15:09:02.942705 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+15:09:02.946132 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+15:09:02.948743 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+15:09:02.951524 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+15:09:02.954349 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+15:09:02.958685 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+15:09:02.964560 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+15:09:02.971166 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+15:09:02.987327 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+15:09:03.011410 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+15:09:03.022851 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+15:09:03.047995 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+15:09:03.056706 [debug] [MainThread]: Parsing macros/artifact_run.sql
+15:09:03.059955 [debug] [MainThread]: Parsing macros/create_artifact_resources.sql
+15:09:03.074084 [debug] [MainThread]: Parsing macros/dedupe_artifacts_v1.sql
+15:09:03.079684 [debug] [MainThread]: Parsing macros/dedupe_artifacts_v2.sql
+15:09:03.086507 [debug] [MainThread]: Parsing macros/flatten_manifest.sql
+15:09:03.089868 [debug] [MainThread]: Parsing macros/flatten_results.sql
+15:09:03.092118 [debug] [MainThread]: Parsing macros/migrate_v1_to_v2.sql
+15:09:03.105530 [debug] [MainThread]: Parsing macros/upload_artifacts.sql
+15:09:03.115009 [debug] [MainThread]: Parsing macros/upload_artifacts_v2.sql
+15:09:03.142587 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+15:09:03.148844 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+15:09:03.152001 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+15:09:03.155746 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+15:09:03.158880 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+15:09:03.165382 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+15:09:03.174704 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+15:09:03.178234 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+15:09:03.184064 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+15:09:03.204126 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+15:09:03.208124 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+15:09:03.212004 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+15:09:03.215799 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+15:09:03.218613 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+15:09:03.225422 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+15:09:03.228758 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+15:09:03.232065 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+15:09:03.235665 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+15:09:03.238609 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+15:09:03.243085 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+15:09:03.247121 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+15:09:03.251044 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+15:09:03.261827 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+15:09:03.265065 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+15:09:03.268650 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+15:09:03.272004 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+15:09:03.275234 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+15:09:03.321219 [debug] [MainThread]: Parsing macros/schema_tests/accepted_range.sql
+15:09:03.327511 [debug] [MainThread]: Parsing macros/schema_tests/at_least_one.sql
+15:09:03.330914 [debug] [MainThread]: Parsing macros/schema_tests/cardinality_equality.sql
+15:09:03.336049 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+15:09:03.339942 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+15:09:03.347590 [debug] [MainThread]: Parsing macros/schema_tests/expression_is_true.sql
+15:09:03.351964 [debug] [MainThread]: Parsing macros/schema_tests/fewer_rows_than.sql
+15:09:03.356836 [debug] [MainThread]: Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+15:09:03.376322 [debug] [MainThread]: Parsing macros/schema_tests/not_accepted_values.sql
+15:09:03.382741 [debug] [MainThread]: Parsing macros/schema_tests/not_constant.sql
+15:09:03.386159 [debug] [MainThread]: Parsing macros/schema_tests/not_null_proportion.sql
+15:09:03.392632 [debug] [MainThread]: Parsing macros/schema_tests/recency.sql
+15:09:03.396976 [debug] [MainThread]: Parsing macros/schema_tests/relationships_where.sql
+15:09:03.402103 [debug] [MainThread]: Parsing macros/schema_tests/sequential_values.sql
+15:09:03.407712 [debug] [MainThread]: Parsing macros/schema_tests/test_not_null_where.sql
+15:09:03.412280 [debug] [MainThread]: Parsing macros/schema_tests/test_unique_where.sql
+15:09:03.417901 [debug] [MainThread]: Parsing macros/schema_tests/unique_combination_of_columns.sql
+15:09:03.425079 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+15:09:03.434765 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+15:09:03.444546 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+15:09:03.454527 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+15:09:03.460166 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+15:09:03.467093 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+15:09:03.475228 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+15:09:03.487862 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+15:09:03.493145 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+15:09:03.497545 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+15:09:03.510503 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+15:09:03.520264 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+15:09:03.524316 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+15:09:03.531781 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+15:09:03.535627 [debug] [MainThread]: Parsing macros/sql/star.sql
+15:09:03.543983 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+15:09:03.551108 [debug] [MainThread]: Parsing macros/sql/union.sql
+15:09:03.566198 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+15:09:03.581760 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+15:09:03.587020 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+15:09:03.591312 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+15:09:04.159936 [debug] [MainThread]: 1603: static parser failed on challenge_01.sql
+15:09:04.180146 [debug] [MainThread]: 1602: parser fallback to jinja rendering on challenge_01.sql
+15:09:04.290759 [debug] [MainThread]: 1699: static parser successfully parsed dim_dbt__current_models.sql
+15:09:04.307431 [debug] [MainThread]: 1699: static parser successfully parsed fct_dbt__critical_path.sql
+15:09:04.316593 [debug] [MainThread]: 1699: static parser successfully parsed fct_dbt__exposures_updates.sql
+15:09:04.327557 [debug] [MainThread]: 1699: static parser successfully parsed fct_dbt__latest_full_model_executions.sql
+15:09:04.339794 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__exposures.sql
+15:09:04.360388 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__exposures.sql
+15:09:04.363542 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__models.sql
+15:09:04.374043 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__models.sql
+15:09:04.376966 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__seeds.sql
+15:09:04.389457 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__seeds.sql
+15:09:04.394667 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__snapshots.sql
+15:09:04.406008 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__snapshots.sql
+15:09:04.409802 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__sources.sql
+15:09:04.417889 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__sources.sql
+15:09:04.421781 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__tests.sql
+15:09:04.431450 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__tests.sql
+15:09:04.434155 [debug] [MainThread]: 1603: static parser failed on incremental/fct_dbt__model_executions.sql
+15:09:04.445588 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/fct_dbt__model_executions.sql
+15:09:04.448515 [debug] [MainThread]: 1603: static parser failed on incremental/fct_dbt__run_results.sql
+15:09:04.477765 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/fct_dbt__run_results.sql
+15:09:04.481160 [debug] [MainThread]: 1603: static parser failed on incremental/fct_dbt__seed_executions.sql
+15:09:04.492254 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/fct_dbt__seed_executions.sql
+15:09:04.495201 [debug] [MainThread]: 1603: static parser failed on incremental/fct_dbt__snapshot_executions.sql
+15:09:04.505498 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/fct_dbt__snapshot_executions.sql
+15:09:04.510344 [debug] [MainThread]: 1603: static parser failed on incremental/fct_dbt__test_executions.sql
+15:09:04.521157 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/fct_dbt__test_executions.sql
+15:09:04.524889 [debug] [MainThread]: 1603: static parser failed on incremental/int_dbt__model_executions.sql
+15:09:04.533536 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/int_dbt__model_executions.sql
+15:09:04.537434 [debug] [MainThread]: 1603: static parser failed on staging/stg_dbt__artifacts.sql
+15:09:04.547214 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_dbt__artifacts.sql
+15:09:04.550568 [debug] [MainThread]: 1603: static parser failed on staging/stg_dbt__node_executions.sql
+15:09:04.588327 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_dbt__node_executions.sql
+15:09:04.594316 [debug] [MainThread]: 1603: static parser failed on staging/stg_dbt__nodes.sql
+15:09:04.609543 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_dbt__nodes.sql
+15:09:04.613222 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_dbt__run_results.sql
+15:09:04.621379 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_dbt__run_results_env_keys.sql
+15:09:04.898924 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1134ffa0-a88b-4e22-8ebc-b0acbeb6d957', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0f702b700>]}
+15:09:04.937262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1134ffa0-a88b-4e22-8ebc-b0acbeb6d957', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0f5e71970>]}
+15:09:04.939606 [info ] [MainThread]: Found 22 models, 16 tests, 0 snapshots, 0 analyses, 379 macros, 1 operation, 0 seed files, 4 sources, 0 exposures, 0 metrics
+15:09:04.941349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1134ffa0-a88b-4e22-8ebc-b0acbeb6d957', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0f5e71790>]}
+15:09:04.949914 [info ] [MainThread]: 
+15:09:04.952032 [debug] [MainThread]: Acquiring new snowflake connection "master"
+15:09:04.958494 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB_dbt_artifacts_stg"
+15:09:04.959750 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB_DVD_FROSTY_FRIDAYS"
+15:09:04.961151 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB_dbt_artifacts"
+15:09:04.989451 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB_dbt_artifacts_stg"
+15:09:04.992270 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB_DVD_FROSTY_FRIDAYS"
+15:09:04.997442 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB_dbt_artifacts"
+15:09:05.000427 [debug] [ThreadPool]: On list_TEST_DB_dbt_artifacts_stg: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "connection_name": "list_TEST_DB_dbt_artifacts_stg"} */
+
+    show terse objects in TEST_DB.dbt_artifacts_stg
+15:09:05.002483 [debug] [ThreadPool]: On list_TEST_DB_DVD_FROSTY_FRIDAYS: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "connection_name": "list_TEST_DB_DVD_FROSTY_FRIDAYS"} */
+
+    show terse objects in TEST_DB.DVD_FROSTY_FRIDAYS
+15:09:05.006390 [debug] [ThreadPool]: On list_TEST_DB_dbt_artifacts: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "connection_name": "list_TEST_DB_dbt_artifacts"} */
+
+    show terse objects in TEST_DB.dbt_artifacts
+15:09:05.008445 [debug] [ThreadPool]: Opening a new connection, currently in state init
+15:09:05.010642 [debug] [ThreadPool]: Opening a new connection, currently in state init
+15:09:05.012972 [debug] [ThreadPool]: Opening a new connection, currently in state init
+15:09:06.524447 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.51 seconds
+15:09:06.532453 [debug] [ThreadPool]: On list_TEST_DB_DVD_FROSTY_FRIDAYS: Close
+15:09:06.833656 [debug] [ThreadPool]: SQL status: SUCCESS 20 in 1.82 seconds
+15:09:06.839817 [debug] [ThreadPool]: On list_TEST_DB_dbt_artifacts: Close
+15:09:07.085551 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.08 seconds
+15:09:07.090787 [debug] [ThreadPool]: On list_TEST_DB_dbt_artifacts_stg: Close
+15:09:07.288585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1134ffa0-a88b-4e22-8ebc-b0acbeb6d957', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff0f5e63400>]}
+15:09:07.293384 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+15:09:07.316307 [info ] [MainThread]: 
+15:09:07.327933 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.stg_dbt__artifacts
+15:09:07.328286 [debug] [Thread-2  ]: Began running node model.frosty.challenge_01
+15:09:07.328733 [debug] [Thread-3  ]: Began running node operation.frosty.frosty-on-run-start-0
+15:09:07.330799 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.stg_dbt__artifacts"
+15:09:07.332729 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.frosty.challenge_01"
+15:09:07.334761 [debug] [Thread-3  ]: Acquiring new snowflake connection "operation.frosty.frosty-on-run-start-0"
+15:09:07.336546 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.stg_dbt__artifacts
+15:09:07.338821 [debug] [Thread-2  ]: Began compiling node model.frosty.challenge_01
+15:09:07.340501 [debug] [Thread-3  ]: Began compiling node operation.frosty.frosty-on-run-start-0
+15:09:07.342330 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.stg_dbt__artifacts
+15:09:07.344050 [debug] [Thread-2  ]: Compiling model.frosty.challenge_01
+15:09:07.345467 [debug] [Thread-3  ]: Compiling operation.frosty.frosty-on-run-start-0
+15:09:07.351405 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.stg_dbt__artifacts"
+15:09:07.362040 [debug] [Thread-2  ]: Using snowflake connection "model.frosty.challenge_01"
+15:09:07.366648 [debug] [Thread-3  ]: Writing injected SQL for node "operation.frosty.frosty-on-run-start-0"
+15:09:07.370167 [debug] [Thread-2  ]: On model.frosty.challenge_01: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "node_id": "model.frosty.challenge_01"} */
+
+    
+    create stage if not exists TEST_DB.DVD_FROSTY_FRIDAYS.dvd_frosty_fridays 
+    url='s3://frostyfridaychallenges/challenge_1/' file_format=(type=csv SKIP_HEADER =1);
+15:09:07.372441 [debug] [Thread-1  ]: finished collecting timing info
+15:09:07.374630 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+15:09:07.376764 [debug] [Thread-3  ]: finished collecting timing info
+15:09:07.377301 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.stg_dbt__artifacts
+15:09:07.380039 [debug] [Thread-3  ]: Began executing node operation.frosty.frosty-on-run-start-0
+15:09:07.381890 [debug] [Thread-1  ]: finished collecting timing info
+15:09:07.384330 [debug] [Thread-3  ]: finished collecting timing info
+15:09:07.388084 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.stg_dbt__artifacts
+15:09:07.390859 [debug] [Thread-3  ]: Finished running node operation.frosty.frosty-on-run-start-0
+15:09:07.395556 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.stg_dbt__nodes
+15:09:07.398771 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.stg_dbt__run_results
+15:09:07.402989 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.stg_dbt__nodes"
+15:09:07.429500 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.stg_dbt__run_results"
+15:09:07.432686 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.stg_dbt__nodes
+15:09:07.435647 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.stg_dbt__run_results
+15:09:07.457694 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.stg_dbt__nodes
+15:09:07.460083 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.stg_dbt__run_results
+15:09:07.473800 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.stg_dbt__nodes"
+15:09:07.480371 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.stg_dbt__run_results"
+15:09:07.488655 [debug] [Thread-4  ]: finished collecting timing info
+15:09:07.490920 [debug] [Thread-1  ]: finished collecting timing info
+15:09:07.491763 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.stg_dbt__nodes
+15:09:07.494275 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.stg_dbt__run_results
+15:09:07.497466 [debug] [Thread-4  ]: finished collecting timing info
+15:09:07.500046 [debug] [Thread-1  ]: finished collecting timing info
+15:09:07.503387 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.stg_dbt__nodes
+15:09:07.506310 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.stg_dbt__run_results
+15:09:07.510074 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.dim_dbt__exposures
+15:09:07.510630 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.dim_dbt__models
+15:09:07.511933 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.dim_dbt__seeds
+15:09:07.514468 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__exposures"
+15:09:07.517443 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__models"
+15:09:07.520045 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__seeds"
+15:09:07.541957 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.dim_dbt__exposures
+15:09:07.544260 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.dim_dbt__models
+15:09:07.546633 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.dim_dbt__seeds
+15:09:07.568160 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.dim_dbt__exposures
+15:09:07.570125 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.dim_dbt__models
+15:09:07.571967 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.dim_dbt__seeds
+15:09:07.584975 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__exposures"
+15:09:07.616788 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__models"
+15:09:07.649880 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__seeds"
+15:09:07.675685 [debug] [Thread-3  ]: finished collecting timing info
+15:09:07.729838 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.dim_dbt__exposures
+15:09:07.735807 [debug] [Thread-4  ]: finished collecting timing info
+15:09:07.759394 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.dim_dbt__models
+15:09:07.771484 [debug] [Thread-4  ]: finished collecting timing info
+15:09:07.741628 [debug] [Thread-3  ]: finished collecting timing info
+15:09:07.752682 [debug] [Thread-1  ]: finished collecting timing info
+15:09:07.784784 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.dim_dbt__models
+15:09:07.820216 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.dim_dbt__exposures
+15:09:07.851326 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.dim_dbt__seeds
+15:09:07.869616 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.dim_dbt__snapshots
+15:09:07.876739 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.dim_dbt__sources
+15:09:07.879859 [debug] [Thread-1  ]: finished collecting timing info
+15:09:07.882070 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__snapshots"
+15:09:07.883921 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__sources"
+15:09:07.885714 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.dim_dbt__seeds
+15:09:07.887123 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.dim_dbt__snapshots
+15:09:07.888863 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.dim_dbt__sources
+15:09:07.890319 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.dim_dbt__tests
+15:09:07.891567 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.dim_dbt__snapshots
+15:09:07.893137 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.dim_dbt__sources
+15:09:07.894710 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__tests"
+15:09:07.901515 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__snapshots"
+15:09:07.975718 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__sources"
+15:09:07.978893 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.dim_dbt__tests
+15:09:07.987249 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.dim_dbt__tests
+15:09:07.989056 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.001048 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__tests"
+15:09:08.003855 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.004598 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.dim_dbt__snapshots
+15:09:08.015614 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.dim_dbt__sources
+15:09:08.023224 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.024762 [debug] [Thread-1  ]: finished collecting timing info
+15:09:08.027816 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.032321 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.dim_dbt__snapshots
+15:09:08.034669 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.dim_dbt__tests
+15:09:08.038053 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.dim_dbt__sources
+15:09:08.040674 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.stg_dbt__node_executions
+15:09:08.062615 [debug] [Thread-1  ]: finished collecting timing info
+15:09:08.065585 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.stg_dbt__run_results_env_keys
+15:09:08.068972 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.stg_dbt__node_executions"
+15:09:08.071437 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.dim_dbt__tests
+15:09:08.073982 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.stg_dbt__run_results_env_keys"
+15:09:08.075841 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.stg_dbt__node_executions
+15:09:08.077763 [debug] [Thread-1  ]: Began running node test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60
+15:09:08.080320 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.stg_dbt__run_results_env_keys
+15:09:08.083110 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.stg_dbt__node_executions
+15:09:08.086286 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60"
+15:09:08.088659 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.stg_dbt__run_results_env_keys
+15:09:08.110674 [debug] [Thread-1  ]: Began compiling node test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60
+15:09:08.114527 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.stg_dbt__node_executions"
+15:09:08.126405 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.stg_dbt__run_results_env_keys"
+15:09:08.128255 [debug] [Thread-1  ]: Compiling test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60
+15:09:08.165861 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.166487 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.168829 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60"
+15:09:08.170209 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.stg_dbt__run_results_env_keys
+15:09:08.172486 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.stg_dbt__node_executions
+15:09:08.194453 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.196819 [debug] [Thread-1  ]: finished collecting timing info
+15:09:08.197807 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.201534 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.stg_dbt__run_results_env_keys
+15:09:08.204462 [debug] [Thread-1  ]: Began executing node test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60
+15:09:08.212520 [debug] [Thread-1  ]: finished collecting timing info
+15:09:08.209120 [debug] [Thread-3  ]: Began running node test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e
+15:09:08.206596 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.stg_dbt__node_executions
+15:09:08.232906 [debug] [Thread-4  ]: Began running node test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d
+15:09:08.230123 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e"
+15:09:08.226646 [debug] [Thread-1  ]: Finished running node test.dbt_artifacts.not_null_dim_dbt__models_manifest_model_id.df81d26c60
+15:09:08.236424 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d"
+15:09:08.239103 [debug] [Thread-3  ]: Began compiling node test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e
+15:09:08.260369 [debug] [Thread-1  ]: Began running node test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a
+15:09:08.262483 [debug] [Thread-4  ]: Began compiling node test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d
+15:09:08.264219 [debug] [Thread-3  ]: Compiling test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e
+15:09:08.267068 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a"
+15:09:08.269462 [debug] [Thread-4  ]: Compiling test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d
+15:09:08.289572 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e"
+15:09:08.290297 [debug] [Thread-1  ]: Began compiling node test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a
+15:09:08.306267 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d"
+15:09:08.310603 [debug] [Thread-1  ]: Compiling test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a
+15:09:08.314572 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.324012 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a"
+15:09:08.334306 [debug] [Thread-3  ]: Began executing node test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e
+15:09:08.335039 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.340120 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.342701 [debug] [Thread-4  ]: Began executing node test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d
+15:09:08.344752 [debug] [Thread-1  ]: finished collecting timing info
+15:09:08.346499 [debug] [Thread-3  ]: Finished running node test.dbt_artifacts.unique_dim_dbt__models_manifest_model_id.c105319f3e
+15:09:08.348369 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.350334 [debug] [Thread-1  ]: Began executing node test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a
+15:09:08.352864 [debug] [Thread-3  ]: Began running node test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000
+15:09:08.355846 [debug] [Thread-4  ]: Finished running node test.dbt_artifacts.not_null_dim_dbt__exposures_manifest_exposure_id.368be81b8d
+15:09:08.357972 [debug] [Thread-1  ]: finished collecting timing info
+15:09:08.359971 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000"
+15:09:08.362020 [debug] [Thread-4  ]: Began running node test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce
+15:09:08.364777 [debug] [Thread-1  ]: Finished running node test.dbt_artifacts.unique_dim_dbt__exposures_manifest_exposure_id_output_feeds.9ff988c63a
+15:09:08.366918 [debug] [Thread-3  ]: Began compiling node test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000
+15:09:08.370023 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce"
+15:09:08.378315 [debug] [Thread-4  ]: Began compiling node test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce
+15:09:08.375548 [debug] [Thread-3  ]: Compiling test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000
+15:09:08.372447 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.fct_dbt__run_results
+15:09:08.381458 [debug] [Thread-4  ]: Compiling test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce
+15:09:08.396807 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000"
+15:09:08.398744 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__run_results"
+15:09:08.420877 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce"
+15:09:08.423227 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.fct_dbt__run_results
+15:09:08.444165 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.fct_dbt__run_results
+15:09:08.445110 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.466009 [debug] [Thread-1  ]: Using snowflake connection "model.dbt_artifacts.fct_dbt__run_results"
+15:09:08.466370 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.472675 [debug] [Thread-3  ]: Began executing node test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000
+15:09:08.475452 [debug] [Thread-1  ]: On model.dbt_artifacts.fct_dbt__run_results: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "node_id": "model.dbt_artifacts.fct_dbt__run_results"} */
+select
+                key as value
+
+            from TEST_DB.dbt_artifacts_stg.stg_dbt__run_results_env_keys
+            group by key
+            order by count(*) desc
+15:09:08.477809 [debug] [Thread-4  ]: Began executing node test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce
+15:09:08.480533 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.482953 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+15:09:08.485265 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.503939 [debug] [Thread-4  ]: Finished running node test.dbt_artifacts.unique_dim_dbt__sources_manifest_source_id.a9a1a372ce
+15:09:08.487750 [debug] [Thread-3  ]: Finished running node test.dbt_artifacts.not_null_dim_dbt__sources_manifest_source_id.34e9829000
+15:09:08.508494 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.fct_dbt__snapshot_executions
+15:09:08.511417 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__snapshot_executions"
+15:09:08.513482 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.fct_dbt__snapshot_executions
+15:09:08.516953 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.fct_dbt__snapshot_executions
+15:09:08.505819 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.fct_dbt__seed_executions
+15:09:08.528295 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__snapshot_executions"
+15:09:08.542212 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__seed_executions"
+15:09:08.556447 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.fct_dbt__seed_executions
+15:09:08.559708 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.fct_dbt__seed_executions
+15:09:08.560801 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.579801 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__seed_executions"
+15:09:08.595450 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.fct_dbt__snapshot_executions
+15:09:08.610151 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.613984 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.fct_dbt__snapshot_executions
+15:09:08.614396 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.617425 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.fct_dbt__test_executions
+15:09:08.619717 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.fct_dbt__seed_executions
+15:09:08.621934 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__test_executions"
+15:09:08.624605 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.626993 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.fct_dbt__test_executions
+15:09:08.629750 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.fct_dbt__seed_executions
+15:09:08.632533 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.fct_dbt__test_executions
+15:09:08.645287 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.int_dbt__model_executions
+15:09:08.657447 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__test_executions"
+15:09:08.675105 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.int_dbt__model_executions"
+15:09:08.682789 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.int_dbt__model_executions
+15:09:08.685082 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.685770 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.int_dbt__model_executions
+15:09:08.687945 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.fct_dbt__test_executions
+15:09:08.701692 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.int_dbt__model_executions"
+15:09:08.703367 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.710432 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.fct_dbt__test_executions
+15:09:08.712110 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.715067 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.int_dbt__model_executions
+15:09:08.716846 [debug] [Thread-4  ]: finished collecting timing info
+15:09:08.719869 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.int_dbt__model_executions
+15:09:08.722530 [debug] [Thread-3  ]: Began running node model.dbt_artifacts.fct_dbt__model_executions
+15:09:08.725405 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__model_executions"
+15:09:08.727478 [debug] [Thread-3  ]: Began compiling node model.dbt_artifacts.fct_dbt__model_executions
+15:09:08.729565 [debug] [Thread-3  ]: Compiling model.dbt_artifacts.fct_dbt__model_executions
+15:09:08.754057 [debug] [Thread-3  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__model_executions"
+15:09:08.805462 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.832782 [debug] [Thread-3  ]: Began executing node model.dbt_artifacts.fct_dbt__model_executions
+15:09:08.848158 [debug] [Thread-3  ]: finished collecting timing info
+15:09:08.870992 [debug] [Thread-3  ]: Finished running node model.dbt_artifacts.fct_dbt__model_executions
+15:09:08.923765 [debug] [Thread-4  ]: Began running node model.dbt_artifacts.fct_dbt__exposures_updates
+15:09:08.936386 [debug] [Thread-3  ]: Began running node test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69
+15:09:08.937246 [debug] [Thread-4  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__exposures_updates"
+15:09:08.986742 [debug] [Thread-4  ]: Began compiling node model.dbt_artifacts.fct_dbt__exposures_updates
+15:09:08.961156 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69"
+15:09:09.032581 [debug] [Thread-4  ]: Compiling model.dbt_artifacts.fct_dbt__exposures_updates
+15:09:09.057217 [debug] [Thread-3  ]: Began compiling node test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69
+15:09:09.099641 [debug] [Thread-4  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__exposures_updates"
+15:09:09.101390 [debug] [Thread-3  ]: Compiling test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69
+15:09:09.128239 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69"
+15:09:09.130494 [debug] [Thread-4  ]: finished collecting timing info
+15:09:09.135327 [debug] [Thread-4  ]: Began executing node model.dbt_artifacts.fct_dbt__exposures_updates
+15:09:09.138176 [debug] [Thread-4  ]: finished collecting timing info
+15:09:09.145123 [debug] [Thread-3  ]: finished collecting timing info
+15:09:09.152877 [debug] [Thread-4  ]: Finished running node model.dbt_artifacts.fct_dbt__exposures_updates
+15:09:09.157560 [debug] [Thread-3  ]: Began executing node test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69
+15:09:09.160579 [debug] [Thread-4  ]: Began running node test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59
+15:09:09.164386 [debug] [Thread-3  ]: finished collecting timing info
+15:09:09.178871 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59"
+15:09:09.183058 [debug] [Thread-3  ]: Finished running node test.dbt_artifacts.not_null_fct_dbt__model_executions_model_execution_id.ecb7ddbb69
+15:09:09.187892 [debug] [Thread-4  ]: Began compiling node test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59
+15:09:09.208946 [debug] [Thread-4  ]: Compiling test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59
+15:09:09.237852 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59"
+15:09:09.277353 [debug] [Thread-4  ]: finished collecting timing info
+15:09:09.279650 [debug] [Thread-4  ]: Began executing node test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59
+15:09:09.310163 [debug] [Thread-4  ]: finished collecting timing info
+15:09:09.316542 [debug] [Thread-4  ]: Finished running node test.dbt_artifacts.unique_fct_dbt__model_executions_model_execution_id.ab9f314f59
+15:09:09.334125 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.96 seconds
+15:09:09.342784 [debug] [Thread-2  ]: Writing injected SQL for node "model.frosty.challenge_01"
+15:09:09.350939 [debug] [Thread-2  ]: finished collecting timing info
+15:09:09.362948 [debug] [Thread-2  ]: Began executing node model.frosty.challenge_01
+15:09:09.365021 [debug] [Thread-2  ]: finished collecting timing info
+15:09:09.367024 [debug] [Thread-2  ]: On model.frosty.challenge_01: Close
+15:09:09.543535 [debug] [Thread-2  ]: Finished running node model.frosty.challenge_01
+15:09:09.669990 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 1.19 seconds
+15:09:09.677353 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__run_results"
+15:09:09.692593 [debug] [Thread-1  ]: finished collecting timing info
+15:09:09.694073 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.fct_dbt__run_results
+15:09:09.696392 [debug] [Thread-1  ]: finished collecting timing info
+15:09:09.698886 [debug] [Thread-1  ]: On model.dbt_artifacts.fct_dbt__run_results: Close
+15:09:09.869990 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.fct_dbt__run_results
+15:09:09.874314 [debug] [Thread-3  ]: Began running node test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935
+15:09:09.874741 [debug] [Thread-4  ]: Began running node test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3
+15:09:09.879955 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3"
+15:09:09.881527 [debug] [Thread-4  ]: Began compiling node test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3
+15:09:09.876681 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935"
+15:09:09.875001 [debug] [Thread-2  ]: Began running node model.dbt_artifacts.dim_dbt__current_models
+15:09:09.886794 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbt_artifacts.dim_dbt__current_models"
+15:09:09.888159 [debug] [Thread-2  ]: Began compiling node model.dbt_artifacts.dim_dbt__current_models
+15:09:09.885045 [debug] [Thread-3  ]: Began compiling node test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935
+15:09:09.875249 [debug] [Thread-1  ]: Began running node model.dbt_artifacts.fct_dbt__latest_full_model_executions
+15:09:09.883289 [debug] [Thread-4  ]: Compiling test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3
+15:09:09.890045 [debug] [Thread-2  ]: Compiling model.dbt_artifacts.dim_dbt__current_models
+15:09:09.891639 [debug] [Thread-3  ]: Compiling test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935
+15:09:09.893496 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__latest_full_model_executions"
+15:09:09.905844 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3"
+15:09:09.913370 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbt_artifacts.dim_dbt__current_models"
+15:09:09.920208 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935"
+15:09:09.921903 [debug] [Thread-1  ]: Began compiling node model.dbt_artifacts.fct_dbt__latest_full_model_executions
+15:09:09.928759 [debug] [Thread-4  ]: finished collecting timing info
+15:09:09.929994 [debug] [Thread-1  ]: Compiling model.dbt_artifacts.fct_dbt__latest_full_model_executions
+15:09:09.931364 [debug] [Thread-3  ]: finished collecting timing info
+15:09:09.932254 [debug] [Thread-4  ]: Began executing node test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3
+15:09:09.941845 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__latest_full_model_executions"
+15:09:09.943043 [debug] [Thread-2  ]: finished collecting timing info
+15:09:09.943704 [debug] [Thread-3  ]: Began executing node test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935
+15:09:09.945613 [debug] [Thread-4  ]: finished collecting timing info
+15:09:09.949416 [debug] [Thread-2  ]: Began executing node model.dbt_artifacts.dim_dbt__current_models
+15:09:09.951017 [debug] [Thread-3  ]: finished collecting timing info
+15:09:09.951606 [debug] [Thread-1  ]: finished collecting timing info
+15:09:09.953990 [debug] [Thread-4  ]: Finished running node test.dbt_artifacts.unique_fct_dbt__run_results_command_invocation_id.08941b96a3
+15:09:09.955915 [debug] [Thread-2  ]: finished collecting timing info
+15:09:09.958336 [debug] [Thread-3  ]: Finished running node test.dbt_artifacts.not_null_fct_dbt__run_results_command_invocation_id.11abc48935
+15:09:09.960132 [debug] [Thread-1  ]: Began executing node model.dbt_artifacts.fct_dbt__latest_full_model_executions
+15:09:09.964129 [debug] [Thread-2  ]: Finished running node model.dbt_artifacts.dim_dbt__current_models
+15:09:09.967561 [debug] [Thread-1  ]: finished collecting timing info
+15:09:09.970644 [debug] [Thread-4  ]: Began running node test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb
+15:09:09.971028 [debug] [Thread-3  ]: Began running node test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea
+15:09:09.972124 [debug] [Thread-1  ]: Finished running node model.dbt_artifacts.fct_dbt__latest_full_model_executions
+15:09:09.974701 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb"
+15:09:09.976348 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea"
+15:09:09.979095 [debug] [Thread-2  ]: Began running node model.dbt_artifacts.fct_dbt__critical_path
+15:09:09.979384 [debug] [Thread-1  ]: Began running node test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66
+15:09:09.980537 [debug] [Thread-4  ]: Began compiling node test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb
+15:09:09.982093 [debug] [Thread-3  ]: Began compiling node test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea
+15:09:09.984348 [debug] [Thread-2  ]: Acquiring new snowflake connection "model.dbt_artifacts.fct_dbt__critical_path"
+15:09:09.986995 [debug] [Thread-1  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66"
+15:09:09.989454 [debug] [Thread-4  ]: Compiling test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb
+15:09:09.991340 [debug] [Thread-3  ]: Compiling test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea
+15:09:09.993494 [debug] [Thread-2  ]: Began compiling node model.dbt_artifacts.fct_dbt__critical_path
+15:09:09.995515 [debug] [Thread-1  ]: Began compiling node test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66
+15:09:10.003014 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb"
+15:09:10.009608 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea"
+15:09:10.010908 [debug] [Thread-2  ]: Compiling model.dbt_artifacts.fct_dbt__critical_path
+15:09:10.012130 [debug] [Thread-1  ]: Compiling test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66
+15:09:10.023583 [debug] [Thread-2  ]: Writing injected SQL for node "model.dbt_artifacts.fct_dbt__critical_path"
+15:09:10.024419 [debug] [Thread-4  ]: finished collecting timing info
+15:09:10.030437 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66"
+15:09:10.031665 [debug] [Thread-3  ]: finished collecting timing info
+15:09:10.033990 [debug] [Thread-4  ]: Began executing node test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb
+15:09:10.036581 [debug] [Thread-2  ]: finished collecting timing info
+15:09:10.038576 [debug] [Thread-3  ]: Began executing node test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea
+15:09:10.045955 [debug] [Thread-3  ]: finished collecting timing info
+15:09:10.041803 [debug] [Thread-1  ]: finished collecting timing info
+15:09:10.043530 [debug] [Thread-2  ]: Began executing node model.dbt_artifacts.fct_dbt__critical_path
+15:09:10.041368 [debug] [Thread-4  ]: finished collecting timing info
+15:09:10.056763 [debug] [Thread-4  ]: Finished running node test.dbt_artifacts.not_null_dim_dbt__current_models_manifest_model_id.95b21ba2fb
+15:09:10.051446 [debug] [Thread-1  ]: Began executing node test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66
+15:09:10.054564 [debug] [Thread-2  ]: finished collecting timing info
+15:09:10.048942 [debug] [Thread-3  ]: Finished running node test.dbt_artifacts.unique_dim_dbt__current_models_manifest_model_id.bbc3c5dbea
+15:09:10.058611 [debug] [Thread-4  ]: Began running node test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c
+15:09:10.060881 [debug] [Thread-1  ]: finished collecting timing info
+15:09:10.063832 [debug] [Thread-2  ]: Finished running node model.dbt_artifacts.fct_dbt__critical_path
+15:09:10.067802 [debug] [Thread-4  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c"
+15:09:10.069850 [debug] [Thread-1  ]: Finished running node test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66
+15:09:10.073558 [debug] [Thread-3  ]: Began running node test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496
+15:09:10.074163 [debug] [Thread-2  ]: Began running node test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10
+15:09:10.075285 [debug] [Thread-4  ]: Began compiling node test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c
+15:09:10.084453 [debug] [Thread-4  ]: Compiling test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c
+15:09:10.082466 [debug] [Thread-2  ]: Acquiring new snowflake connection "test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10"
+15:09:10.079480 [debug] [Thread-3  ]: Acquiring new snowflake connection "test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496"
+15:09:10.109720 [debug] [Thread-3  ]: Began compiling node test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496
+15:09:10.107727 [debug] [Thread-2  ]: Began compiling node test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10
+15:09:10.094547 [debug] [Thread-4  ]: Writing injected SQL for node "test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c"
+15:09:10.111584 [debug] [Thread-3  ]: Compiling test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496
+15:09:10.113285 [debug] [Thread-2  ]: Compiling test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10
+15:09:10.121805 [debug] [Thread-3  ]: Writing injected SQL for node "test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496"
+15:09:10.147991 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10"
+15:09:10.150134 [debug] [Thread-4  ]: finished collecting timing info
+15:09:10.153917 [debug] [Thread-4  ]: Began executing node test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c
+15:09:10.154262 [debug] [Thread-3  ]: finished collecting timing info
+15:09:10.156844 [debug] [Thread-2  ]: finished collecting timing info
+15:09:10.157799 [debug] [Thread-4  ]: finished collecting timing info
+15:09:10.159596 [debug] [Thread-3  ]: Began executing node test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496
+15:09:10.161318 [debug] [Thread-2  ]: Began executing node test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10
+15:09:10.163364 [debug] [Thread-4  ]: Finished running node test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c
+15:09:10.165218 [debug] [Thread-3  ]: finished collecting timing info
+15:09:10.168232 [debug] [Thread-2  ]: finished collecting timing info
+15:09:10.173521 [debug] [Thread-3  ]: Finished running node test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496
+15:09:10.176727 [debug] [Thread-2  ]: Finished running node test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10
+15:09:10.185826 [debug] [MainThread]: Connection 'master' was properly closed.
+15:09:10.189710 [debug] [MainThread]: Connection 'test.dbt_artifacts.not_null_fct_dbt__latest_full_model_executions_node_id.75b07a2f66' was properly closed.
+15:09:10.191753 [debug] [MainThread]: Connection 'test.dbt_artifacts.not_null_fct_dbt__critical_path_node_id.8a76d88496' was properly closed.
+15:09:10.194050 [debug] [MainThread]: Connection 'test.dbt_artifacts.unique_fct_dbt__critical_path_node_id.a430b9cf10' was properly closed.
+15:09:10.196476 [debug] [MainThread]: Connection 'test.dbt_artifacts.unique_fct_dbt__latest_full_model_executions_node_id.b6f2773b6c' was properly closed.
+15:09:10.242992 [info ] [MainThread]: Done.
+15:09:10.825819 [debug] [MainThread]: Acquiring new snowflake connection "generate_catalog"
+15:09:10.827742 [info ] [MainThread]: Building catalog
+15:09:10.836918 [debug] [ThreadPool]: Acquiring new snowflake connection "TEST_DB.information_schema"
+15:09:10.852633 [debug] [ThreadPool]: Using snowflake connection "TEST_DB.information_schema"
+15:09:10.854366 [debug] [ThreadPool]: On TEST_DB.information_schema: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "connection_name": "TEST_DB.information_schema"} */
+
+    
+      with tables as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+              table_type as "table_type",
+              comment as "table_comment",
+
+              -- note: this is the _role_ that owns the table
+              table_owner as "table_owner",
+
+              'Clustering Key' as "stats:clustering_key:label",
+              clustering_key as "stats:clustering_key:value",
+              'The key used to cluster this table' as "stats:clustering_key:description",
+              (clustering_key is not null) as "stats:clustering_key:include",
+
+              'Row Count' as "stats:row_count:label",
+              row_count as "stats:row_count:value",
+              'An approximate count of rows in this table' as "stats:row_count:description",
+              (row_count is not null) as "stats:row_count:include",
+
+              'Approximate Size' as "stats:bytes:label",
+              bytes as "stats:bytes:value",
+              'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+              (bytes is not null) as "stats:bytes:include",
+
+              'Last Modified' as "stats:last_modified:label",
+              to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+              'The timestamp for last update/change' as "stats:last_modified:description",
+              (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+
+          from TEST_DB.INFORMATION_SCHEMA.tables
+
+      ),
+
+      columns as (
+
+          select
+              table_catalog as "table_database",
+              table_schema as "table_schema",
+              table_name as "table_name",
+
+              column_name as "column_name",
+              ordinal_position as "column_index",
+              data_type as "column_type",
+              comment as "column_comment"
+
+          from TEST_DB.INFORMATION_SCHEMA.columns
+      )
+
+      select *
+      from tables
+      join columns using ("table_database", "table_schema", "table_name")
+      where (upper("table_schema") = upper('dbt_artifacts') or upper("table_schema") = upper('dbt_artifacts_stg') or upper("table_schema") = upper('dvd_frosty_fridays'))
+      order by "column_index"
+15:09:10.855870 [debug] [ThreadPool]: Opening a new connection, currently in state init
