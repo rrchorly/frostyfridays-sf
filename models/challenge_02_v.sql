@@ -8,4 +8,8 @@
  )
 }}
 
-select dept, job_title from {{ ref('challenge_02') }}
+select
+  employee_id,
+  dept,
+  job_title
+from {{ ref('challenge_02') }}

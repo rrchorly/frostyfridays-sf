@@ -9488,3 +9488,366 @@ UPDATE challenge_02 SET COUNTRY = 'Japan' WHERE EMPLOYEE_ID = 8;
 22:16:26.605312 [info ] [MainThread]: 
 22:16:26.607587 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
 22:16:26.610785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadd793b880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadd6e8feb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadd4afdd00>]}
+
+
+============================== 2022-07-20 22:26:51.489562 | c0b824c6-21b4-437f-ade2-c00bb9f5d8bc ==============================
+22:26:51.489581 [info ] [MainThread]: Running with dbt=1.1.1
+22:26:51.491122 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/app/profiles', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['+challenge_02_v'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+22:26:51.493476 [debug] [MainThread]: Tracking: tracking
+22:26:51.495223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4e60462e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4e6046340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4e60463a0>]}
+22:26:52.120887 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 3 files changed.
+22:26:52.122811 [debug] [MainThread]: Partial parsing: added file: frosty://macros/docs/ch_02.md
+22:26:52.124459 [debug] [MainThread]: Partial parsing: update schema file: frosty://models/schemas.yml
+22:26:52.126034 [debug] [MainThread]: Partial parsing: updated file: frosty://models/challenge_02_v.sql
+22:26:52.127649 [debug] [MainThread]: Partial parsing: updated file: frosty://macros/generate_schema_name.sql
+22:26:52.129057 [debug] [MainThread]: Parsing macros/generate_schema_name.sql
+22:26:52.135351 [info ] [MainThread]: Change detected to override macro used during parsing. Starting full parse.
+22:26:52.137002 [debug] [MainThread]: Parsing macros/ch_02_updates.sql
+22:26:52.141191 [debug] [MainThread]: Parsing macros/create_stage.sql
+22:26:52.143882 [debug] [MainThread]: Parsing macros/generate_schema_name.sql
+22:26:52.147365 [debug] [MainThread]: Parsing macros/catalog.sql
+22:26:52.151975 [debug] [MainThread]: Parsing macros/adapters.sql
+22:26:52.226256 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+22:26:52.237260 [debug] [MainThread]: Parsing macros/materializations/view.sql
+22:26:52.241671 [debug] [MainThread]: Parsing macros/materializations/table.sql
+22:26:52.249041 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+22:26:52.260226 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+22:26:52.263241 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+22:26:52.279980 [debug] [MainThread]: Parsing macros/etc/statement.sql
+22:26:52.289799 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+22:26:52.305117 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+22:26:52.310715 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+22:26:52.315097 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+22:26:52.318617 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+22:26:52.326868 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+22:26:52.331752 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+22:26:52.344863 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+22:26:52.351016 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+22:26:52.355011 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+22:26:52.370743 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+22:26:52.375941 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+22:26:52.381495 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+22:26:52.414331 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+22:26:52.419593 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+22:26:52.427693 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+22:26:52.445320 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+22:26:52.475726 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+22:26:52.508255 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+22:26:52.521668 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+22:26:52.526069 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+22:26:52.550156 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+22:26:52.582774 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+22:26:52.603809 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+22:26:52.608674 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+22:26:52.617081 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+22:26:52.621207 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+22:26:52.624672 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+22:26:52.626862 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+22:26:52.629303 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+22:26:52.632102 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+22:26:52.636735 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+22:26:52.642453 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+22:26:52.648990 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+22:26:52.662431 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+22:26:52.680589 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+22:26:52.690939 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+22:26:52.711351 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+22:26:52.718842 [debug] [MainThread]: Parsing macros/artifact_run.sql
+22:26:52.721029 [debug] [MainThread]: Parsing macros/create_artifact_resources.sql
+22:26:52.734447 [debug] [MainThread]: Parsing macros/dedupe_artifacts_v1.sql
+22:26:52.740110 [debug] [MainThread]: Parsing macros/dedupe_artifacts_v2.sql
+22:26:52.747779 [debug] [MainThread]: Parsing macros/flatten_manifest.sql
+22:26:52.751518 [debug] [MainThread]: Parsing macros/flatten_results.sql
+22:26:52.755003 [debug] [MainThread]: Parsing macros/migrate_v1_to_v2.sql
+22:26:52.768019 [debug] [MainThread]: Parsing macros/upload_artifacts.sql
+22:26:52.777046 [debug] [MainThread]: Parsing macros/upload_artifacts_v2.sql
+22:26:52.803018 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+22:26:52.810079 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+22:26:52.815338 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+22:26:52.819962 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+22:26:52.823739 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+22:26:52.830865 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+22:26:52.844858 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+22:26:52.850719 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+22:26:52.859594 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+22:26:52.883353 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+22:26:52.888041 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+22:26:52.892072 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+22:26:52.898900 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+22:26:52.902022 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+22:26:52.909585 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+22:26:52.913738 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+22:26:52.916549 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+22:26:52.920196 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+22:26:52.923478 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+22:26:52.928310 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+22:26:52.932782 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+22:26:52.937018 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+22:26:52.947964 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+22:26:52.952034 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+22:26:52.955811 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+22:26:52.959079 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+22:26:52.961877 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+22:26:53.007361 [debug] [MainThread]: Parsing macros/schema_tests/accepted_range.sql
+22:26:53.014483 [debug] [MainThread]: Parsing macros/schema_tests/at_least_one.sql
+22:26:53.018341 [debug] [MainThread]: Parsing macros/schema_tests/cardinality_equality.sql
+22:26:53.022967 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+22:26:53.026797 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+22:26:53.033733 [debug] [MainThread]: Parsing macros/schema_tests/expression_is_true.sql
+22:26:53.038291 [debug] [MainThread]: Parsing macros/schema_tests/fewer_rows_than.sql
+22:26:53.042766 [debug] [MainThread]: Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+22:26:53.062375 [debug] [MainThread]: Parsing macros/schema_tests/not_accepted_values.sql
+22:26:53.070421 [debug] [MainThread]: Parsing macros/schema_tests/not_constant.sql
+22:26:53.074533 [debug] [MainThread]: Parsing macros/schema_tests/not_null_proportion.sql
+22:26:53.079830 [debug] [MainThread]: Parsing macros/schema_tests/recency.sql
+22:26:53.084327 [debug] [MainThread]: Parsing macros/schema_tests/relationships_where.sql
+22:26:53.089422 [debug] [MainThread]: Parsing macros/schema_tests/sequential_values.sql
+22:26:53.097163 [debug] [MainThread]: Parsing macros/schema_tests/test_not_null_where.sql
+22:26:53.105035 [debug] [MainThread]: Parsing macros/schema_tests/test_unique_where.sql
+22:26:53.108229 [debug] [MainThread]: Parsing macros/schema_tests/unique_combination_of_columns.sql
+22:26:53.113767 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+22:26:53.123400 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+22:26:53.132747 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+22:26:53.142233 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+22:26:53.147447 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+22:26:53.153941 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+22:26:53.161218 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+22:26:53.173865 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+22:26:53.178174 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+22:26:53.181516 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+22:26:53.194689 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+22:26:53.199208 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+22:26:53.203526 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+22:26:53.211030 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+22:26:53.215558 [debug] [MainThread]: Parsing macros/sql/star.sql
+22:26:53.223263 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+22:26:53.230304 [debug] [MainThread]: Parsing macros/sql/union.sql
+22:26:53.245045 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+22:26:53.261233 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+22:26:53.266316 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+22:26:53.269985 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+22:26:53.788437 [debug] [MainThread]: 1603: static parser failed on challenge_01.sql
+22:26:53.809031 [debug] [MainThread]: 1602: parser fallback to jinja rendering on challenge_01.sql
+22:26:53.814477 [debug] [MainThread]: 1603: static parser failed on challenge_02.sql
+22:26:53.823420 [debug] [MainThread]: 1602: parser fallback to jinja rendering on challenge_02.sql
+22:26:53.828708 [debug] [MainThread]: 1603: static parser failed on challenge_02_v.sql
+22:26:53.847861 [debug] [MainThread]: 1602: parser fallback to jinja rendering on challenge_02_v.sql
+22:26:53.969659 [debug] [MainThread]: 1699: static parser successfully parsed dim_dbt__current_models.sql
+22:26:53.982957 [debug] [MainThread]: 1699: static parser successfully parsed fct_dbt__critical_path.sql
+22:26:53.988930 [debug] [MainThread]: 1699: static parser successfully parsed fct_dbt__exposures_updates.sql
+22:26:53.994488 [debug] [MainThread]: 1699: static parser successfully parsed fct_dbt__latest_full_model_executions.sql
+22:26:53.999865 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__exposures.sql
+22:26:54.013229 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__exposures.sql
+22:26:54.016757 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__models.sql
+22:26:54.025498 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__models.sql
+22:26:54.028028 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__seeds.sql
+22:26:54.036516 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__seeds.sql
+22:26:54.039539 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__snapshots.sql
+22:26:54.048241 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__snapshots.sql
+22:26:54.051304 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__sources.sql
+22:26:54.060690 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__sources.sql
+22:26:54.063689 [debug] [MainThread]: 1603: static parser failed on incremental/dim_dbt__tests.sql
+22:26:54.071867 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/dim_dbt__tests.sql
+22:26:54.074758 [debug] [MainThread]: 1603: static parser failed on incremental/fct_dbt__model_executions.sql
+22:26:54.083780 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/fct_dbt__model_executions.sql
+22:26:54.086765 [debug] [MainThread]: 1603: static parser failed on incremental/fct_dbt__run_results.sql
+22:26:54.112562 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/fct_dbt__run_results.sql
+22:26:54.116467 [debug] [MainThread]: 1603: static parser failed on incremental/fct_dbt__seed_executions.sql
+22:26:54.126265 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/fct_dbt__seed_executions.sql
+22:26:54.129158 [debug] [MainThread]: 1603: static parser failed on incremental/fct_dbt__snapshot_executions.sql
+22:26:54.138440 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/fct_dbt__snapshot_executions.sql
+22:26:54.141734 [debug] [MainThread]: 1603: static parser failed on incremental/fct_dbt__test_executions.sql
+22:26:54.150749 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/fct_dbt__test_executions.sql
+22:26:54.153853 [debug] [MainThread]: 1603: static parser failed on incremental/int_dbt__model_executions.sql
+22:26:54.164060 [debug] [MainThread]: 1602: parser fallback to jinja rendering on incremental/int_dbt__model_executions.sql
+22:26:54.167143 [debug] [MainThread]: 1603: static parser failed on staging/stg_dbt__artifacts.sql
+22:26:54.175581 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_dbt__artifacts.sql
+22:26:54.178486 [debug] [MainThread]: 1603: static parser failed on staging/stg_dbt__node_executions.sql
+22:26:54.208188 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_dbt__node_executions.sql
+22:26:54.212428 [debug] [MainThread]: 1603: static parser failed on staging/stg_dbt__nodes.sql
+22:26:54.225866 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging/stg_dbt__nodes.sql
+22:26:54.229362 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_dbt__run_results.sql
+22:26:54.235580 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_dbt__run_results_env_keys.sql
+22:26:54.499759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c0b824c6-21b4-437f-ade2-c00bb9f5d8bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4e4dbb280>]}
+22:26:54.534034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c0b824c6-21b4-437f-ade2-c00bb9f5d8bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4e4e3bdc0>]}
+22:26:54.535611 [info ] [MainThread]: Found 24 models, 16 tests, 0 snapshots, 0 analyses, 380 macros, 1 operation, 0 seed files, 4 sources, 0 exposures, 0 metrics
+22:26:54.536882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0b824c6-21b4-437f-ade2-c00bb9f5d8bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4e4e3bdf0>]}
+22:26:54.541181 [info ] [MainThread]: 
+22:26:54.543122 [debug] [MainThread]: Acquiring new snowflake connection "master"
+22:26:54.545664 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB"
+22:26:54.556392 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB"
+22:26:54.557798 [debug] [ThreadPool]: On list_TEST_DB: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "connection_name": "list_TEST_DB"} */
+
+    show terse schemas in database TEST_DB
+    limit 10000
+22:26:54.558863 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:26:55.492439 [debug] [ThreadPool]: SQL status: SUCCESS 20 in 0.93 seconds
+22:26:55.499189 [debug] [ThreadPool]: On list_TEST_DB: Close
+22:26:55.690206 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB_DVD_FROSTY_FRIDAYS"
+22:26:55.693043 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB_dbt_artifacts"
+22:26:55.694079 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB_dbt_artifacts_stg"
+22:26:55.730074 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB_DVD_FROSTY_FRIDAYS"
+22:26:55.735982 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB_dbt_artifacts"
+22:26:55.741951 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB_dbt_artifacts_stg"
+22:26:55.744342 [debug] [ThreadPool]: On list_TEST_DB_DVD_FROSTY_FRIDAYS: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "connection_name": "list_TEST_DB_DVD_FROSTY_FRIDAYS"} */
+
+    show terse objects in TEST_DB.DVD_FROSTY_FRIDAYS
+22:26:55.747449 [debug] [ThreadPool]: On list_TEST_DB_dbt_artifacts: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "connection_name": "list_TEST_DB_dbt_artifacts"} */
+
+    show terse objects in TEST_DB.dbt_artifacts
+22:26:55.749453 [debug] [ThreadPool]: On list_TEST_DB_dbt_artifacts_stg: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "connection_name": "list_TEST_DB_dbt_artifacts_stg"} */
+
+    show terse objects in TEST_DB.dbt_artifacts_stg
+22:26:55.752423 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+22:26:55.754945 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:26:55.756971 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:26:56.934577 [debug] [ThreadPool]: SQL status: SUCCESS 20 in 1.18 seconds
+22:26:56.942016 [debug] [ThreadPool]: On list_TEST_DB_dbt_artifacts: Close
+22:26:57.040841 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.29 seconds
+22:26:57.048572 [debug] [ThreadPool]: On list_TEST_DB_DVD_FROSTY_FRIDAYS: Close
+22:26:57.076854 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.32 seconds
+22:26:57.082579 [debug] [ThreadPool]: On list_TEST_DB_dbt_artifacts_stg: Close
+22:26:57.431124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0b824c6-21b4-437f-ade2-c00bb9f5d8bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4e4e19f70>]}
+22:26:57.433570 [info ] [MainThread]: 
+22:26:57.435540 [info ] [MainThread]: Running 1 on-run-start hook
+22:26:57.438111 [debug] [MainThread]: Compiling operation.frosty.frosty-on-run-start-0
+22:26:57.447522 [debug] [MainThread]: Writing injected SQL for node "operation.frosty.frosty-on-run-start-0"
+22:26:57.455621 [info ] [MainThread]: 1 of 1 START hook: frosty.on-run-start.0 ....................................... [RUN]
+22:26:57.457627 [debug] [MainThread]: Using snowflake connection "master"
+22:26:57.459168 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "connection_name": "master"} */
+create schema if not exists "TEST_DB"."DVD_FROSTY_FRIDAYS"
+22:26:57.460761 [debug] [MainThread]: Opening a new connection, currently in state init
+22:26:58.579342 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.12 seconds
+22:26:58.585253 [info ] [MainThread]: 1 of 1 OK hook: frosty.on-run-start.0 .......................................... [[32mSUCCESS 1[0m in 1.13s]
+22:26:58.588069 [info ] [MainThread]: 
+22:26:58.590980 [debug] [MainThread]: On master: Close
+22:26:58.758900 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+22:26:58.761877 [info ] [MainThread]: 
+22:26:58.772726 [debug] [Thread-1  ]: Began running node model.frosty.challenge_02
+22:26:58.774749 [info ] [Thread-1  ]: 1 of 2 START table model DVD_FROSTY_FRIDAYS.challenge_02 ....................... [RUN]
+22:26:58.776844 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.frosty.challenge_02"
+22:26:58.778679 [debug] [Thread-1  ]: Began compiling node model.frosty.challenge_02
+22:26:58.780236 [debug] [Thread-1  ]: Compiling model.frosty.challenge_02
+22:26:58.790126 [debug] [Thread-1  ]: Using snowflake connection "model.frosty.challenge_02"
+22:26:58.791945 [debug] [Thread-1  ]: On model.frosty.challenge_02: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "node_id": "model.frosty.challenge_02"} */
+
+    
+    create stage if not exists TEST_DB.DVD_FROSTY_FRIDAYS.dvd_frosty_fridays_02 
+    url='s3://frostyfridaychallenges/challenge_2' file_format=(type=PARQUET);
+22:26:58.793889 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+22:26:59.484136 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.69 seconds
+22:26:59.487540 [debug] [Thread-1  ]: Writing injected SQL for node "model.frosty.challenge_02"
+22:26:59.496928 [debug] [Thread-1  ]: finished collecting timing info
+22:26:59.498718 [debug] [Thread-1  ]: Began executing node model.frosty.challenge_02
+22:26:59.537905 [debug] [Thread-1  ]: Writing runtime SQL for node "model.frosty.challenge_02"
+22:26:59.547586 [debug] [Thread-1  ]: Using snowflake connection "model.frosty.challenge_02"
+22:26:59.549339 [debug] [Thread-1  ]: On model.frosty.challenge_02: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "node_id": "model.frosty.challenge_02"} */
+
+
+      create or replace transient table TEST_DB.DVD_FROSTY_FRIDAYS.challenge_02  as
+      (
+
+
+  
+
+
+
+
+
+with staged as (
+    select 
+      metadata$filename as filename_,
+      metadata$file_row_number as row_,
+      $1 as v from @dvd_frosty_fridays_02
+    order by 1,2
+)
+select 
+    v:city::string as city,
+    v:country::string as country,
+    v:country_code::string as country_code,
+    v:dept::string as dept,
+    v:education::string as education,
+    v:email::string as email,
+    v:employee_id::string as employee_id,
+    v:first_name::string as first_name,
+    v:job_title::string as job_title,
+    v:last_name::string as last_name,
+    v:payroll_iban::string as payroll_iban,
+    v:postcode::string as postcode,
+    v:street_name::string as street_name,
+    v:street_num::string as street_num,
+    v:time_zone::string as time_zone,
+    v:title::string as title
+from staged
+      );
+22:27:01.340602 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.79 seconds
+22:27:01.356515 [debug] [Thread-1  ]: finished collecting timing info
+22:27:01.358564 [debug] [Thread-1  ]: On model.frosty.challenge_02: Close
+22:27:01.540356 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c0b824c6-21b4-437f-ade2-c00bb9f5d8bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4ce073f70>]}
+22:27:01.543565 [info ] [Thread-1  ]: 1 of 2 OK created table model DVD_FROSTY_FRIDAYS.challenge_02 .................. [[32mSUCCESS 1[0m in 2.76s]
+22:27:01.546436 [debug] [Thread-1  ]: Finished running node model.frosty.challenge_02
+22:27:01.549956 [debug] [Thread-3  ]: Began running node model.frosty.challenge_02_v
+22:27:01.552238 [info ] [Thread-3  ]: 2 of 2 START view model DVD_FROSTY_FRIDAYS.challenge_02_v ...................... [RUN]
+22:27:01.554851 [debug] [Thread-3  ]: Acquiring new snowflake connection "model.frosty.challenge_02_v"
+22:27:01.556692 [debug] [Thread-3  ]: Began compiling node model.frosty.challenge_02_v
+22:27:01.558484 [debug] [Thread-3  ]: Compiling model.frosty.challenge_02_v
+22:27:01.564800 [debug] [Thread-3  ]: Writing injected SQL for node "model.frosty.challenge_02_v"
+22:27:01.569594 [debug] [Thread-3  ]: finished collecting timing info
+22:27:01.571107 [debug] [Thread-3  ]: Began executing node model.frosty.challenge_02_v
+22:27:01.662738 [debug] [Thread-3  ]: Writing runtime SQL for node "model.frosty.challenge_02_v"
+22:27:01.669620 [debug] [Thread-3  ]: Using snowflake connection "model.frosty.challenge_02_v"
+22:27:01.671550 [debug] [Thread-3  ]: On model.frosty.challenge_02_v: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "node_id": "model.frosty.challenge_02_v"} */
+
+  create or replace  view TEST_DB.DVD_FROSTY_FRIDAYS.challenge_02_v
+  
+   as (
+    
+
+select
+  employee_id,
+  dept,
+  job_title
+from TEST_DB.DVD_FROSTY_FRIDAYS.challenge_02
+  );
+22:27:01.673270 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+22:27:02.989875 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 1.32 seconds
+22:27:03.001187 [debug] [Thread-3  ]: Using snowflake connection "model.frosty.challenge_02_v"
+22:27:03.003364 [debug] [Thread-3  ]: On model.frosty.challenge_02_v: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "node_id": "model.frosty.challenge_02_v"} */
+
+        create or replace stream TEST_DB.DVD_FROSTY_FRIDAYS.stream_dvd_ch_02 on view TEST_DB.DVD_FROSTY_FRIDAYS.challenge_02_v
+22:27:03.607733 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 0.6 seconds
+22:27:03.615168 [debug] [Thread-3  ]: Using snowflake connection "model.frosty.challenge_02_v"
+22:27:03.617461 [debug] [Thread-3  ]: On model.frosty.challenge_02_v: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "frosty", "target_name": "dev", "node_id": "model.frosty.challenge_02_v"} */
+
+    
+UPDATE challenge_02 SET COUNTRY = 'Japan' WHERE EMPLOYEE_ID = 8;
+22:27:04.301259 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 0.68 seconds
+22:27:04.304350 [debug] [Thread-3  ]: Using snowflake connection "model.frosty.challenge_02_v"
+22:27:04.306848 [debug] [Thread-3  ]: On model.frosty.challenge_02_v: UPDATE challenge_02 SET LAST_NAME = 'Forester' WHERE EMPLOYEE_ID = 22;
+22:27:05.130850 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 0.82 seconds
+22:27:05.135617 [debug] [Thread-3  ]: Using snowflake connection "model.frosty.challenge_02_v"
+22:27:05.137666 [debug] [Thread-3  ]: On model.frosty.challenge_02_v: UPDATE challenge_02 SET DEPT = 'Marketing' WHERE EMPLOYEE_ID = 25;
+22:27:05.973009 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 0.83 seconds
+22:27:05.976437 [debug] [Thread-3  ]: Using snowflake connection "model.frosty.challenge_02_v"
+22:27:05.981977 [debug] [Thread-3  ]: On model.frosty.challenge_02_v: UPDATE challenge_02 SET TITLE = 'Ms' WHERE EMPLOYEE_ID = 32;
+22:27:07.046811 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 1.06 seconds
+22:27:07.051512 [debug] [Thread-3  ]: Using snowflake connection "model.frosty.challenge_02_v"
+22:27:07.054661 [debug] [Thread-3  ]: On model.frosty.challenge_02_v: UPDATE challenge_02 SET JOB_TITLE = 'Senior Financial Analyst' WHERE EMPLOYEE_ID = 68;
+22:27:07.789168 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 0.73 seconds
+22:27:07.797916 [debug] [Thread-3  ]: finished collecting timing info
+22:27:07.799985 [debug] [Thread-3  ]: On model.frosty.challenge_02_v: Close
+22:27:07.981953 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c0b824c6-21b4-437f-ade2-c00bb9f5d8bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4e4064760>]}
+22:27:07.985523 [info ] [Thread-3  ]: 2 of 2 OK created view model DVD_FROSTY_FRIDAYS.challenge_02_v ................. [[32mSUCCESS 1[0m in 6.43s]
+22:27:07.989524 [debug] [Thread-3  ]: Finished running node model.frosty.challenge_02_v
+22:27:07.998383 [debug] [MainThread]: Acquiring new snowflake connection "master"
+22:27:08.001020 [info ] [MainThread]: 
+22:27:08.003114 [info ] [MainThread]: Finished running 1 table model, 1 view model, 1 hook in 13.46s.
+22:27:08.005527 [debug] [MainThread]: Connection 'master' was properly closed.
+22:27:08.007212 [debug] [MainThread]: Connection 'model.frosty.challenge_02_v' was properly closed.
+22:27:08.009990 [debug] [MainThread]: Connection 'model.frosty.challenge_02' was properly closed.
+22:27:08.012169 [debug] [MainThread]: Connection 'list_TEST_DB_dbt_artifacts_stg' was properly closed.
+22:27:08.047673 [info ] [MainThread]: 
+22:27:08.049447 [info ] [MainThread]: [32mCompleted successfully[0m
+22:27:08.051123 [info ] [MainThread]: 
+22:27:08.053366 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+22:27:08.055899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4e4e15850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4e4e155e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4ce1103a0>]}
