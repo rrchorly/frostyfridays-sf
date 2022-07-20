@@ -1,9 +1,9 @@
-name: 'weather'
+name: 'frosty'
 version: '1.0.0'
 config-version: 2
 
 # Setup profile for re_data in your ~/.dbt/profile.yml file
-profile: 'weather'
+profile: 'frosty'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
@@ -23,3 +23,7 @@ models:
     +schema: dbt_artifacts
     staging:
       +schema: dbt_artifacts_stg
+
+on-run-start:
+  - "create schema if not exists \"{{ target.database }}\".\"{{ target.schema }}\""
+  # - "create stage if not exists \"{{ target.database }}\".\"{{ target.schema }}\".dvd_frosty_fridays url='s3://frostyfridaychallenges/challenge_1/' file_format=(type=csv SKIP_HEADER =1)"

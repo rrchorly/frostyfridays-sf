@@ -1,4 +1,4 @@
-weather:
+frosty:
   target: dev
   outputs:
     dev:

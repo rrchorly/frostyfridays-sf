@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: challenge_01
+    description: '{{ doc("challenge01") }}'
+    columns:
+    - name: filename_
+      description: full path of the original filename
+    - name: row_
+      description: original row order inside the file
+    - name: result
+      description: whatever existed here.
