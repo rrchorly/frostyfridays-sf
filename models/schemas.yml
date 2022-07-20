@@ -10,3 +10,7 @@ models:
       description: original row order inside the file
     - name: result
       description: whatever existed here.
+  - name: challenge_02
+    description: base table derived from the parquet file.
+  - name: challenge_02_v
+    description: '{{ doc("challenge02") }}'
