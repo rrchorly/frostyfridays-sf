@@ -35,8 +35,7 @@ jobs:
           python-version: "3.9"
       - name: pk
         run: |
-          pwd
-          env 
+          pwd 
           echo ${{ secrets.SSH_KEY }} >> ./rsa_key_david_sf.p8 
     
       - name: install requirements
