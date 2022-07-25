@@ -58,7 +58,7 @@ jobs:
           echo "uploading to s3"
           aws s3 cp ./output/manifest.json  s3://dvd-il-bucket-public/frosty/manifest.json
           aws s3 cp ./output/catalog.json  s3://dvd-il-bucket-public/frosty/catalog.json
-          aws s3 cp ./output/index.html  s3://dvd-il-bucket-public/frosty/index.html
+          aws s3 cp ./index.html  s3://dvd-il-bucket-public/frosty/index.html
       - name: say gg
         run: |
           echo "we're done"
