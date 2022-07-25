@@ -36,7 +36,7 @@ jobs:
       - name: pk
         run: |
           pwd 
-          echo ${{ secrets.SSH_KEY }} >> ./rsa_key_david_sf.p8 
+          echo "${{ secrets.SSH_KEY }}" >> ./rsa_key_david_sf.p8 
     
       - name: install requirements
         run: "pip install -r requirements.txt"
