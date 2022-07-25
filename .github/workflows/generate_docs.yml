@@ -19,7 +19,7 @@ jobs:
       dvd_sf_wh: ${{  secrets.dvd_frosty_wh }} 
       dvd_sf_user: ${{ secrets.dvd_frosty_user }}
       dvd_sf_role: ${{ secrets.dvd_frosty_role }}
-      dvd_sf_sf_account: ${{ secrets.dvd_frosty_sf_account }}
+      dvd_sf_account: ${{ secrets.dvd_frosty_sf_account }}
       dvd_sf_passphrase: ${{ secrets.dvd_frosty_passphrase }}
       DBT_PROFILES_DIR: /home/runner/work/re_data_sample/re_data_sample/weather/profiles
       SSH_KEY: ${{ secrets.SSH_KEY }}
