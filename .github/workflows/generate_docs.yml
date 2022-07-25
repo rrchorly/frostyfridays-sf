@@ -46,6 +46,13 @@ jobs:
         run: |
           pwd
           export DBT_PROFILES_DIR=$(pwd)/profiles
+          export dvd_frosty_passphrase = $DVD_FROSTY_PASSPHRASE
+          export dvd_frosty_sf_account = $DVD_FROSTY_SF_ACCOUNT
+          export dvd_frosty_user = $DVD_FROSTY_USER
+          export dvd_frosty_role = $DVD_FROSTY_ROLE
+          export dvd_frosty_db = $DVD_FROSTY_DB
+          export dvd_frosty_schema = $DVD_FROSTY_SCHEMA
+          export dvd_frosty_wh = $DVD_FROSTY_WH
           echo "generating docs"
           dbt debug
           dbt docs generate
