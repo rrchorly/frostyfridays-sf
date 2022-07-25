@@ -45,6 +45,7 @@ jobs:
       - name: dbt docs generate
         run: |
           pwd
+          export DBT_PROFILES=$(pwd)/profiles
           echo "generating docs"
           dbt docs generate
           echo "keeping only frosty"
