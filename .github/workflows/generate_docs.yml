@@ -1,0 +1,61 @@
+name: refresh docs
+
+on: 
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    
+
+jobs:
+
+  generate_docs:
+    name: run docs
+    runs-on: ubuntu-latest
+
+  # Set the environment variables needed for the run
+    env:
+      dvd_frosty_db: ${{  secrets.dvd_frosty_db }} 
+      dvd_frosty_schema: ${{  secrets.dvd_frosty_schema }} 
+      dvd_frosty_wh: ${{  secrets.dvd_frosty_wh }} 
+      dvd_frosty_user: ${{ secrets.dvd_frosty_user }}
+      dvd_frosty_role: ${{ secrets.dvd_frosty_role }}
+      dvd_frosty_sf_account: ${{ secrets.dvd_frosty_sf_account }}
+      dvd_frosty_passphrase: ${{ secrets.dvd_frosty_passphrase }}
+      DBT_PROFILES_DIR: /home/runner/work/re_data_sample/re_data_sample/weather/profiles
+      SSH_KEY: ${{ secrets.SSH_KEY }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }} 
+      AWS_EC2_METADATA_DISABLED: true
+
+    steps:
+      - uses: "actions/checkout@v3"
+      - uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.9"
+      - name: pk
+        run: |
+          pwd
+          env 
+          echo ${{ secrets.SSH_KEY }} >> ./rsa_key_david_sf.p8 
+    
+      - name: install requirements
+        run: "pip install -r requirements.txt"
+      - name: install aws
+        run: "sudo apt-get install -yqq awscli"
+      - name: dbt docs generate
+        run: |
+          pwd
+          echo "generating docs"
+          dbt docs generate
+          echo "keeping only frosty"
+          cp ./extra/change_manifest.py ./target
+          cd target
+          python change_manifest.py
+          echo "uploading to s3"
+          aws s3 cp ./target/output/manifest.json  s3://dvd-il-bucket-public/frosty/manifest.json
+          aws s3 cp ./target/output/catalog.json  s3://dvd-il-bucket-public/frosty/catalog.json
+          aws s3 cp ./target/output/index.html  s3://dvd-il-bucket-public/frosty/index.html
+      - name: say gg
+        run: |
+          echo "we're done"
