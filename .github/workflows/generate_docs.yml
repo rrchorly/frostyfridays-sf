@@ -46,7 +46,6 @@ jobs:
       - name: dbt docs generate
         run: |
           pwd
-          env | grep 'sf'
           echo "key"
           cat ./rsa_key_david_sf.p8 
           export DBT_PROFILES_DIR=$(pwd)/profiles
@@ -57,9 +56,9 @@ jobs:
           cd target
           python change_manifest.py
           echo "uploading to s3"
-          aws s3 cp ./target/output/manifest.json  s3://dvd-il-bucket-public/frosty/manifest.json
-          aws s3 cp ./target/output/catalog.json  s3://dvd-il-bucket-public/frosty/catalog.json
-          aws s3 cp ./target/output/index.html  s3://dvd-il-bucket-public/frosty/index.html
+          aws s3 cp ./output/manifest.json  s3://dvd-il-bucket-public/frosty/manifest.json
+          aws s3 cp ./output/catalog.json  s3://dvd-il-bucket-public/frosty/catalog.json
+          aws s3 cp ./output/index.html  s3://dvd-il-bucket-public/frosty/index.html
       - name: say gg
         run: |
           echo "we're done"
