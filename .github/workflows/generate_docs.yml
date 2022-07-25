@@ -45,8 +45,9 @@ jobs:
       - name: dbt docs generate
         run: |
           pwd
-          export DBT_PROFILES=$(pwd)/profiles
+          export DBT_PROFILES_DIR=$(pwd)/profiles
           echo "generating docs"
+          dbt debug
           dbt docs generate
           echo "keeping only frosty"
           cp ./extra/change_manifest.py ./target
