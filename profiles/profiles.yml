@@ -13,3 +13,19 @@ frosty:
       schema: "{{ env_var('dvd_sf_schema')}}"
       threads: 4
       client_session_keep_alive: False
+    cicd:
+      type: "snowflake"
+      account: "{{ env_var('dvd_sf_account')}}"
+      private_key_passphrase: "{{ env_var('dvd_sf_passphrase')}}"
+      private_key_path: /home/runner/work/frostyfridays-sf/frostyfridays-sf/rsa_key_david_sf.p8
+      user: "{{ env_var('dvd_sf_user')}}"
+      role: "{{ env_var('dvd_sf_role')}}"
+      database: "{{ env_var('dvd_sf_db')}}" 
+      warehouse: "{{ env_var('dvd_sf_wh')}}"
+      schema: "{{ env_var('dvd_sf_schema')}}"
+      threads: 4
+      client_session_keep_alive: False
+
+
+
+        
