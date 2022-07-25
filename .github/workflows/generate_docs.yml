@@ -14,13 +14,13 @@ jobs:
 
   # Set the environment variables needed for the run
     env:
-      dvd_sf_db: ${{  secrets.dvd_frosty_db }} 
-      dvd_sf_schema: ${{  secrets.dvd_frosty_schema }} 
-      dvd_sf_wh: ${{  secrets.dvd_frosty_wh }} 
-      dvd_sf_user: ${{ secrets.dvd_frosty_user }}
-      dvd_sf_role: ${{ secrets.dvd_frosty_role }}
-      dvd_sf_account: ${{ secrets.dvd_frosty_sf_account }}
-      dvd_sf_passphrase: ${{ secrets.dvd_frosty_passphrase }}
+      dvd_sf_db: ${{  secrets.DVD_SF_DB }} 
+      dvd_sf_schema: ${{  secrets.DVD_SF_SCHEMA }} 
+      dvd_sf_wh: ${{  secrets.DVD_FROSTY_WH }} 
+      dvd_sf_user: ${{ secrets.DVD_SF_USER }}
+      dvd_sf_role: ${{ secrets.DVD_SF_ROLE }}
+      dvd_sf_account: ${{ secrets.DVD_SF_ACCOUNT }}
+      dvd_sf_passphrase: ${{ secrets.DVD_SF_PASSPHRASE }}
       SSH_KEY: ${{ secrets.SSH_KEY }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
