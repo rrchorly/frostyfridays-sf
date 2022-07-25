@@ -23,10 +23,6 @@ models:
     +schema: dbt_artifacts
     staging:
       +schema: dbt_artifacts_stg
-  +challenge_02_v:
-    +post-hook:
-      - "create stream if not exists {{ target.database }}.{{ target.schema }}.stream_dvd_ch_02 on view challenge_02_v"
-
 
 on-run-start:
   - "create schema if not exists \"{{ target.database }}\".\"{{ target.schema }}\""

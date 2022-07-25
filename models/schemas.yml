@@ -14,3 +14,8 @@ models:
     description: base table derived from the parquet file.
   - name: challenge_02_v
     description: '{{ doc("challenge02") }}'
+  - name: challenge_03
+    description: '{{ doc("challenge03") }}'
+    columns:
+      - name: name
+        description: original filename including path
