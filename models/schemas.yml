@@ -7,6 +7,11 @@ sources:
       - name: access_history
       - name: tag_references
       - name: query_history
+  - name: ch_09
+    database: '{{ target.database }}'
+    schema: '{{ target.schema }}'
+    tables:
+      - name: data_to_be_masked
     
 models:
   - name: challenge_01
@@ -52,4 +57,6 @@ models:
   - name: challenge_06_04
     description: '{{ doc("challenge06") }}'
 
+  - name: challenge_09_04
+    description: '{{ doc("challenge09") }}'
     

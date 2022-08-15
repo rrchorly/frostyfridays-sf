@@ -21,8 +21,6 @@
   {% set results_query = run_query(query) %}
   {% set results = results_query.columns[0].values()[0].split(',') %}
   {{ log(results, info = True)}}
-{% else %}
-  {{ log('nothing to do _ ch_06', info=True) }}
 {% endif %}
 
 
