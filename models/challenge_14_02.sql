@@ -11,9 +11,11 @@ superpowers as (
     country_of_residence,
     superhero_name,
     notable_exploits,
-    array_construct_compact( superpower,
-    second_superpower,
-    third_superpower) as superpowers
+    array_construct_compact(
+      superpower,
+      second_superpower,
+      third_superpower)
+      as superpowers
    from base
 )
 select
