@@ -251,3 +251,5 @@ models:
       - name: KEYS
   - name: challenge_18_02
     description: '{{ doc("challenge18") }}'
+  - name: challenge_19
+    description: '{{ doc("challenge19") }}'
