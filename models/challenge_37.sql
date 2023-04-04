@@ -3,6 +3,7 @@
     materialized = 'view'
  )
 }}
+/* Set stage name & stage */
 {% set stage_name = 'dvd_frosty_fridays_37' %}
 {% set stage_additional_info = "url='s3://frostyfridaychallenges/challenge_37/' 
   DIRECTORY = (
@@ -14,6 +15,10 @@
   COMMENT = 'storage integration used for frosty_friday_challenges'
   " %} -- noqa: L016
 
+/* Create the integration and the stage only
+when the variable for this challenge (or the `run_all_`)
+are set
+*/
 {% if execute and var('ch37', var('run_all', false)) %}
 {% set init_integration %}
 create or replace storage integration dvd_frosty_ch37
@@ -22,13 +27,10 @@ create or replace storage integration dvd_frosty_ch37
   storage_aws_role_arn = 'arn:aws:iam::184545621756:role/week37'
   enabled = true
   storage_allowed_locations = ('s3://frostyfridaychallenges/challenge_37/');
-
-
 {% endset %}
 {% if var('init', var('run_all', false)) %}
 {% do run_query(init_integration) %}
 {% endif %}
-
 {{ create_stage(
         database = target.database,
         schema = target.schema,
