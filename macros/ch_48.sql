@@ -1,7 +1,8 @@
 {% macro ch_48() %}
 {# use it like:
-- to create objects
+# to create the objects
 dbt run -s challenge_48 --vars '{"ch48": "value", "email_to_send":"value"}
+# to drop the objects
 dbt run -s challenge_48 --vars '{"ch48": "value", "email_to_send":"value", "cleanup":true}'
 #}
 {% set notification_integration_name = 'notification_frosty_friday_48' %}
