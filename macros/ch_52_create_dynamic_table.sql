@@ -9,7 +9,8 @@ CREATE DYNAMIC TABLE IF NOT EXISTS challenge_52_02
     payload:email::varchar AS email,
     payload:id AS id,
     payload:name::varchar AS name,
-    payload:transactionValue AS transaction_value
+    payload:transactionValue AS transaction_value,
+    ingested_at
 from {{ target.database}}.{{ target.schema }}.challenge_52_01;
 {% endset %}
 {% if execute and var('ch52', var('run_all', false)) %}
