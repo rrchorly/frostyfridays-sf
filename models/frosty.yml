@@ -280,3 +280,5 @@ models:
     description: '{{ doc("challenge40") }}'
   - name: challenge_52
     description: '{{ doc("challenge52") }}'
+  - name: challenge_53
+    description: '{{ doc("challenge53") }}'
