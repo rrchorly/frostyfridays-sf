@@ -23,6 +23,10 @@
 {% set file_format_status = run_query(create_format_query) %}
 {# {{ log(file_format_status.columns[0].values()[0] , info=True) }} #}
 
+/*
+This could be a lot easier with creating table as template, but will
+skip this to use a view
+*/
 {# infer schema #}
 {% set schema_query %}
 SELECT *
