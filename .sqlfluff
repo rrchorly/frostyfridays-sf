@@ -378,3 +378,7 @@ wildcard_policy = single
 [sqlfluff:rules:structure.subquery]
 # By default, allow subqueries in from clauses, but not join clauses
 forbid_subquery_in = join
+
+
+[sqlfluff:templater:dbt:context]
+ch55 = False
