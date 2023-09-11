@@ -299,3 +299,8 @@ models:
     config:
       docs:
         node_color: "orange" 
+  - name: challenge_61
+    description: '{{ doc("challenge61") }}'
+    config:
+      docs:
+        node_color: "green" 
