@@ -1,6 +1,6 @@
 {{
   config(
-    materialized = 'incremental'
+    materialized = env_var("DBT_MATERIALIZATION", 'view') 
  )
 }}
 -- select from query history

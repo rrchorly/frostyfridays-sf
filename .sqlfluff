@@ -382,3 +382,4 @@ forbid_subquery_in = join
 
 [sqlfluff:templater:dbt:context]
 ch55 = False
+ch63 = False
