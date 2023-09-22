@@ -19,12 +19,12 @@ target-path: "target"  # directory which will store compiled SQL files
 clean-targets: ["target", "dbt_modules", "dbt_packages"]
 
 models: 
-  dbt_artifacts:
-    +docs:
-      show: false
-  dbt_utils:
-    +docs:
-      show: false
+  # dbt_artifacts:
+  #   +docs:
+  #     show: false
+  # dbt_utils:
+  #   +docs:
+  #     show: false
   # dbt_artifacts:
   #   +schema: dbt_artifacts
   #   staging:
