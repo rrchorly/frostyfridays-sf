@@ -18,6 +18,9 @@ snapshot-paths: ["snapshots"]
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets: ["target", "dbt_modules", "dbt_packages"]
 
+query-comment:
+  comment: "comment {{ dbt_version }}"
+  append: true
 models: 
   # dbt_artifacts:
   #   +docs:
