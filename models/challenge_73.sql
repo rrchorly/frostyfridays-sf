@@ -22,6 +22,7 @@ WITH
 
 SELECT
     *,
+    level,
     ltrim(sys_connect_by_path(department_name, ' -> '), ' ->') AS path
 FROM raw_
     START WITH head_department_id IS NULL
