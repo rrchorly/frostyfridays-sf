@@ -54,7 +54,7 @@ call ch_52_check_and_generate_data('challenge_52_01');
   {% do run_query(init_query) %}
   {{ log('Query for init challenge_52 ran', info=True)}}
 {% else %}
-  {{ log('Query for init challenge_52 did not run', info=True)}}
+  {{ log('Query for init challenge_52 did not run', info=False)}}
   {{ log(var('52',false), info=True) }}
 {% endif %}
 
