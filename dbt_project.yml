@@ -21,7 +21,8 @@ clean-targets: ["target", "dbt_modules", "dbt_packages"]
 query-comment:
   comment: "comment {{ dbt_version }}"
   append: true
-models: 
+
+#models: 
   # dbt_artifacts:
   #   +docs:
   #     show: false
@@ -33,6 +34,3 @@ models:
   #   staging:
   #     +schema: dbt_artifacts_stg
 
-on-run-start:
-  - "create schema if not exists \"{{ target.database }}\".\"{{ target.schema }}\""
-  # - "create stage if not exists \"{{ target.database }}\".\"{{ target.schema }}\".dvd_frosty_fridays url='s3://frostyfridaychallenges/challenge_1/' file_format=(type=csv SKIP_HEADER =1)"

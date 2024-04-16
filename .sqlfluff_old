@@ -1,4 +1,6 @@
 [sqlfluff]
+# One of [raw|jinja|python|placeholder]
+templater = dbt
 # verbose is an integer (0-2) indicating the level of log output
 verbose = 0
 # Turn off color formatting of output
@@ -6,12 +8,10 @@ nocolor = False
 # Supported dialects https://docs.sqlfluff.com/en/stable/dialects.html
 # Or run 'sqlfluff dialects'
 dialect = snowflake
-# One of [raw|jinja|python|placeholder]
-templater = dbt
 # Comma separated list of rules to check, default to all
 rules = all
 # Comma separated list of rules to exclude, or None
-exclude_rules = None
+exclude_rules = LT05
 # The depth to recursively parse to (0 for unlimited)
 recurse = 0
 # Below controls SQLFluff output, see max_line_length for SQL output
@@ -378,3 +378,9 @@ wildcard_policy = single
 [sqlfluff:rules:structure.subquery]
 # By default, allow subqueries in from clauses, but not join clauses
 forbid_subquery_in = join
+
+
+[sqlfluff:templater:dbt:context]
+ch55 = False
+ch63 = False
+ch64 = False
